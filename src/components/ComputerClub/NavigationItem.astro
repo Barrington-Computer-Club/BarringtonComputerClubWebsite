@@ -1,0 +1,36 @@
+---
+interface Props {
+  name: string,
+  description: string
+}
+
+const {name, description} = Astro.props
+---
+
+
+<div class="navigation-item">
+  <h2 style="flex: 1 1 auto;">{name}</h2>
+  <div style="width: 200px; flex: 3 1 auto;"><p>{description}</p></div>
+</div>
+
+<style>
+  .navigation-item {
+    flex: 1 1 100px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    transition: 100ms;
+  }
+
+  .navigation-item:hover {
+    transform: scale(1.05);
+    transition: 100ms;
+  }
+</style>
