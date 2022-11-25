@@ -13,16 +13,19 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +14 ~/coding/Learning/astro/ComputerClubWebsite/src/pages/index.astro
-badd +8 ~/coding/Learning/astro/ComputerClubWebsite/src/components/Header.astro
-badd +12 ~/coding/Learning/astro/ComputerClubWebsite/src/pages/computerClub.astro
-badd +10 ~/coding/Learning/astro/ComputerClubWebsite/src/components/ComputerClub/ComputerClubHeader.astro
-badd +22 ~/coding/Learning/astro/ComputerClubWebsite/src/components/ComputerClub/NavigationItem.astro
-badd +2 ~/coding/Learning/astro/ComputerClubWebsite/tsconfig.json
+badd +3 src/pages/index.astro
+badd +25 src/components/Header.astro
+badd +14 src/components/ComputerClub/ComputerClubHeader.astro
+badd +14 src/components/ComputerClub/NavigationItem.astro
+badd +1 ~/coding/Learning/astro/ComputerClubWebsite
+badd +5 src/config.ts
+badd +15 src/pages/blog.astro
 argglobal
 %argdel
-$argadd ./
-edit ~/coding/Learning/astro/ComputerClubWebsite/tsconfig.json
+$argadd ~/coding/Learning/astro/ComputerClubWebsite
+tabnew +setlocal\ bufhidden=wipe
+tabrewind
+edit src/components/ComputerClub/ComputerClubHeader.astro
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -36,7 +39,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/coding/Learning/astro/ComputerClubWebsite/src/pages/computerClub.astro
+balt src/pages/index.astro
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -45,13 +48,73 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 2 - ((1 * winheight(0) + 19) / 38)
+let s:l = 22 - ((21 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
-normal! 021|
-tabnext 1
+keepjumps 22
+normal! 03|
+lcd ~/coding/Learning/astro/ComputerClubWebsite
+tabnext
+edit diffview:///home/felix/coding/Learning/astro/ComputerClubWebsite/.git/105f7507fe1/src/components/ComputerClub/ComputerClubHeader.astro
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+wincmd =
+argglobal
+setlocal fdm=diff
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+lcd ~/coding/Learning/astro/ComputerClubWebsite
+wincmd w
+argglobal
+if bufexists(fnamemodify("diffview:///home/felix/coding/Learning/astro/ComputerClubWebsite/.git/:0:/src/components/ComputerClub/ComputerClubHeader.astro", ":p")) | buffer diffview:///home/felix/coding/Learning/astro/ComputerClubWebsite/.git/:0:/src/components/ComputerClub/ComputerClubHeader.astro | else | edit diffview:///home/felix/coding/Learning/astro/ComputerClubWebsite/.git/:0:/src/components/ComputerClub/ComputerClubHeader.astro | endif
+if &buftype ==# 'terminal'
+  silent file diffview:///home/felix/coding/Learning/astro/ComputerClubWebsite/.git/:0:/src/components/ComputerClub/ComputerClubHeader.astro
+endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+lcd ~/coding/Learning/astro/ComputerClubWebsite
+wincmd w
+2wincmd w
+wincmd =
+tabnext 2
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
