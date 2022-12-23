@@ -13,9 +13,9 @@ const posts = (await Astro.glob('./posts/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
 
-const featured = posts[1]
+const featured = posts[2]
 const post1 = posts[0]
-const post2 = posts[2]
+const post2 = posts[1]
 ---
 
 
