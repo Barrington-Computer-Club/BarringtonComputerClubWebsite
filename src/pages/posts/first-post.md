@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Test LOL"
 description: "Great Father Patrick is sharind with us now"
 pubDate: "Jul 08 2022"
-heroImage: "/placeholder-hero.jpg"
+heroImage: "/fatherPatrick.png"
 author: "Great Father Patrick"
 ---
 
