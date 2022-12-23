@@ -9,5 +9,6 @@
 Run a local build using `npm run dev`
 
 ## Preview
+https://barrington-computer-club-website.vercel.app/presentationsAndPosts
 ![Peek 2022-12-23 15-57](https://user-images.githubusercontent.com/88951499/209405206-6c5fddc2-7874-425b-9f2f-8db1b1de79a6.gif)
 
