@@ -8,3 +8,6 @@
 ## Development
 Run a local build using `npm run dev`
 
+## Preview
+[gif](./Peek 2022-12-23 15-49.gif)
+
