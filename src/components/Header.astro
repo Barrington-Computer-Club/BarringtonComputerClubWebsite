@@ -1,32 +1,21 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../config';
+import HeaderLink from "./HeaderLink.astro";
 ---
+<header class="group h-32 bg-white rounded-b-3xl grid grid-cols-4 content-center gap-10 px-40 absolute top-0 right-0 left-0 shadow-2xl hover:h-40 transition-all">
+  <h1 class="col-span-1 text-2xl grid content-center font-bold w-fit"><a href="/">Barrington Computer Club</a></h1>
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink site="/">Home</HeaderLink>
-		<HeaderLink site="/blog">Blog</HeaderLink>
-		<HeaderLink site="/about">About</HeaderLink>
-    <HeaderLink site="/computerClub">Computer Club</HeaderLink>
-	</nav>
+  <div class='grid grid-cols-3 gap-5 col-span-3'>
+    <HeaderLink href='/collaborativeCSLearning'>Collaborative CS Learning</HeaderLink>
+    <HeaderLink href='/presentationsAndPosts'>Presentations and Posts</HeaderLink>
+    <HeaderLink href='/competitions'>Competitions</HeaderLink>
+  </div>
 </header>
 
+
 <style>
-	header {
-		margin: 0em 0 2em;
-    position: absolute;
-    height: 100px;
-    background-color: red;
-    top: 0;
-	}
-  body {
-    padding-top: 100px;
-  }
-	h2 {
-		margin: 0.5em 0;
-	}
+body {
+  margin-top: 8rem;
+  padding-top: 0;
+}
 </style>
+

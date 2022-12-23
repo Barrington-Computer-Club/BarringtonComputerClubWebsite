@@ -1,16 +1,17 @@
 ---
-import ComputerClubHeader from "../components/ComputerClubHeader.astro";
 import '@fontsource/mulish'
 import NavigationItem from "../components/NavigationItem.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import '../styles/global.css';
 ---
 
 
-<ComputerClubHeader />
+<Header />
 
 <div class="container pt-10 xl:max-w-7xl lg:flex justify-center content-center mx-auto lg:py-40"> 
   <div class="group shadow-2xl relative my-auto p-8 h-min basis-8/12 rounded-xl bg-white z-10">
-    <h1 class="text-center font-bold pb-1">The CS Community of Barrington High School</h1>
+    <h1 class="text-center text-4xl mb-5 font-bold pb-1">The CS Community of Barrington High School</h1>
     <div class=" flex w-3/4 mx-auto">
       <p class="basis-1/4 font-bold">Main Goal</p>
       <p class="basis-3/4">Computer club should be a place that exposes its members to the different aspects of computer science with the goal of creating strong, life long CS interests</p>
@@ -18,19 +19,20 @@ import Footer from "../components/Footer.astro";
   </div>
 
   <div class="w-3/4 -mt-40 mx-auto lg:mt-0 lg:-mb-36 lg:-ml-20 lg:basis-4/12">
-    <img class="w-full" alt="Illustration of a computer" src="/3d-fluency-laptop.png">
+    <img id='computer' class="w-full" alt="Illustration of a computer" src="/3d-fluency-laptop.png">
   </div>
 
 </div>
 
 <div class="w-10/12 mb-10 mx-auto rounded-2xl">
-  <h1 class="font-bold text-center mb-6">What We Do</h1>
+  <h1 class="font-bold text-center text-4xl mb-6">What We Do</h1>
   <div class='grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10'>
     <NavigationItem 
       name="Collaborative CS Learning" 
       description="This includes our CS basics reference guide and the framework for reviewing code and projects on discord so that all members can improve their code skills" 
+      href="/collaborativeCSLearning"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 group-hover:stroke-white group-hover:fill-white">
+      <svg xmlns="http://www.w3.org/20 mb-500/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 group-hover:stroke-white group-hover:fill-white">
         <path fill-rule="evenodd" d="M9.664 1.319a.75.75 0 01.672 0 41.059 41.059 0 018.198 5.424.75.75 0 01-.254 1.285 31.372 31.372 0 00-7.86 3.83.75.75 0 01-.84 0 31.508 31.508 0 00-2.08-1.287V9.394c0-.244.116-.463.302-.592a35.504 35.504 0 013.305-2.033.75.75 0 00-.714-1.319 37 37 0 00-3.446 2.12A2.216 2.216 0 006 9.393v.38a31.293 31.293 0 00-4.28-1.746.75.75 0 01-.254-1.285 41.059 41.059 0 018.198-5.424zM6 11.459a29.848 29.848 0 00-2.455-1.158 41.029 41.029 0 00-.39 3.114.75.75 0 00.419.74c.528.256 1.046.53 1.554.82-.21.324-.455.63-.739.914a.75.75 0 101.06 1.06c.37-.369.69-.77.96-1.193a26.61 26.61 0 013.095 2.348.75.75 0 00.992 0 26.547 26.547 0 015.93-3.95.75.75 0 00.42-.739 41.053 41.053 0 00-.39-3.114 29.925 29.925 0 00-5.199 2.801 2.25 2.25 0 01-2.514 0c-.41-.275-.826-.541-1.25-.797a6.985 6.985 0 01-1.084 3.45 26.503 26.503 0 00-1.281-.78A5.487 5.487 0 006 12v-.54z" clip-rule="evenodd" />
       </svg>
 
@@ -39,6 +41,7 @@ import Footer from "../components/Footer.astro";
     <NavigationItem 
       name="Presentations and Posts" 
       description="This is an blog-style archive of our upcoming and past CS presentations as well as posts about CS topics" 
+      href="/presentationsAndPosts"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 group-hover:stroke-white group-hover:fill-white">
         <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h16.5a.75.75 0 010 1.5H18v8.75A2.75 2.75 0 0115.25 15h-1.072l.798 3.06a.75.75 0 01-1.452.38L13.41 18H6.59l-.114.44a.75.75 0 01-1.452-.38L5.823 15H4.75A2.75 2.75 0 012 12.25V3.5h-.25A.75.75 0 011 2.75zM7.373 15l-.391 1.5h6.037l-.392-1.5H7.373zm7.49-8.931a.75.75 0 01-.175 1.046 19.326 19.326 0 00-3.398 3.098.75.75 0 01-1.097.04L8.5 8.561l-2.22 2.22A.75.75 0 115.22 9.72l2.75-2.75a.75.75 0 011.06 0l1.664 1.663a20.786 20.786 0 013.122-2.74.75.75 0 011.046.176z" clip-rule="evenodd" />
@@ -48,6 +51,7 @@ import Footer from "../components/Footer.astro";
     <NavigationItem 
       name="Competitions" 
       description="This serves as a reference for our upcoming competitions and a publishing medium for recognizing competition participation" 
+      href="/competitions"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 group-hover:stroke-white group-hover:fill-white">
         <path fill-rule="evenodd" d="M10 1c-1.828 0-3.623.149-5.371.435a.75.75 0 00-.629.74v.387c-.827.157-1.642.345-2.445.564a.75.75 0 00-.552.698 5 5 0 004.503 5.152 6 6 0 002.946 1.822A6.451 6.451 0 017.768 13H7.5A1.5 1.5 0 006 14.5V17h-.75C4.56 17 4 17.56 4 18.25c0 .414.336.75.75.75h10.5a.75.75 0 00.75-.75c0-.69-.56-1.25-1.25-1.25H14v-2.5a1.5 1.5 0 00-1.5-1.5h-.268a6.453 6.453 0 01-.684-2.202 6 6 0 002.946-1.822 5 5 0 004.503-5.152.75.75 0 00-.552-.698A31.804 31.804 0 0016 2.562v-.387a.75.75 0 00-.629-.74A33.227 33.227 0 0010 1zM2.525 4.422C3.012 4.3 3.504 4.19 4 4.09V5c0 .74.134 1.448.38 2.103a3.503 3.503 0 01-1.855-2.68zm14.95 0a3.503 3.503 0 01-1.854 2.68C15.866 6.449 16 5.74 16 5v-.91c.496.099.988.21 1.475.332z" clip-rule="evenodd" />
@@ -58,17 +62,3 @@ import Footer from "../components/Footer.astro";
 
 <Footer />
 
-
-<style>
-h1 {
-  font-size: 40px;
-}
-
-p {
-  line-height: 30px;
-}
-body {
-  background-color: #ebebeb;
-  overflow-x: hidden;
-}
-</style>

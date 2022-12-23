@@ -1,19 +1,23 @@
 ---
 interface Props {
   name: string,
-  description: string
+  description: string,
+  href: string
 }
 
-const {name, description} = Astro.props
+const {name, description, href} = Astro.props
 ---
 
 
-<div class="bg-white p-5 shadow-md min-h-48 rounded-lg group hover:bg-sky-400 hover:cursor-pointer hover:shadow-2xl hover:scale-105 transition-transform">
-  <div class="flex gap-5 justify-start">
-    <slot />
 
-    <h1 class="font-bold mb-5 group-hover:text-white">{name}</h1>
-  </div>
-  <p class="group-hover:text-white">{description}</p>
+<div class="bg-white p-5 shadow-md min-h-48 rounded-lg group hover:bg-sky-400 hover:shadow-2xl hover:scale-105 transition-transform">
+  <a href={href}>
+    <div class="flex gap-5 justify-start">
+      <slot />
+
+      <h1 class="font-bold mb-5 group-hover:text-white">{name}</h1>
+    </div>
+    <p class="group-hover:text-white">{description}</p>
+  </a>
 </div>
 
