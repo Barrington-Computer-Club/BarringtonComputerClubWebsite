@@ -1,0 +1,31 @@
+---
+import BackgroundImage from './BackgroundImage.astro'
+interface Props {
+  title: string,
+  descirption: string,
+  image: string,
+  author: string,
+  url: string
+}
+
+
+const {title, descirption, image, author, url} = Astro.props
+---
+
+
+
+<BackgroundImage 
+  className="bg-white flex flex-col rounded-2xl shadow-2xl h-60"
+  image={image}
+>
+  <div class="font-bold bg-black/50 w-full h-32 rounded-t-2xl p-6 grid content-center text-2xl">
+    <h1 class="text-white font-bold">{title}</h1>
+    <p class="text-gray-300 text-sm mt-2">Author: {author}</p>
+    <p class="text-white text-sm">{descirption}</p>
+  </div>
+
+  <button class="w-24 mb-3 ml-auto mr-4 backdrop-blur-lg text-sm border-white border-2 hover:bg-sky-400 hover:border-sky-400 hover:scale-110 transition-transform mt-auto text-white rounded-full px-5 py-2"><a href={url}>Read More</a></button>
+
+</BackgroundImage>
+
+

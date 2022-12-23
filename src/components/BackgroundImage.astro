@@ -1,0 +1,22 @@
+---
+interface Props {
+  image: string,
+  className: string
+}
+
+const {className, image} = Astro.props
+---
+
+
+<div 
+  class={className}
+  style={
+    {
+      backgroundImage: `url(${image})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }
+  }
+  >
+  <slot />
+</div>
