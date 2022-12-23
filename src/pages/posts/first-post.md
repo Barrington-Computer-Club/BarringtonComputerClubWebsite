@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "Test LOL"
-description: "Lorem ipsum dolor fuck sit amet"
+description: "Great Father Patrick is sharind with us now"
 pubDate: "Jul 08 2022"
 heroImage: "/placeholder-hero.jpg"
 author: "Great Father Patrick"
