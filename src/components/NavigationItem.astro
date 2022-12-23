@@ -1,0 +1,19 @@
+---
+interface Props {
+  name: string,
+  description: string
+}
+
+const {name, description, icon} = Astro.props
+---
+
+
+<div class="bg-white p-5 shadow-md min-h-48 rounded-lg group hover:bg-sky-400 hover:cursor-pointer hover:shadow-2xl hover:scale-105 transition-transform">
+  <div class="flex gap-5 justify-start">
+    <slot />
+
+    <h1 class="font-bold mb-5 group-hover:text-white">{name}</h1>
+  </div>
+  <p class="group-hover:text-white">{description}</p>
+</div>
+
