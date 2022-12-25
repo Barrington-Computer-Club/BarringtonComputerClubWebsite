@@ -20,6 +20,7 @@
     "@astrojs/vercel": "^2.3.6",
     "@fontsource/montserrat": "^4.5.13",
     "@fontsource/mulish": "^4.5.13",
+    "@theme-toggles/react": "^4.1.0",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "astro": "^1.6.10",
@@ -27,6 +28,7 @@
     "astro-imagetools": "^0.6.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-toggle-dark-mode": "^1.1.1",
     "tailwindcss": "^3.2.4"
   }
 }
