@@ -3,6 +3,15 @@ import HeaderLink from "./HeaderLink.astro";
 import "../styles/global.css";
 import ThemeIcon from "../components/ThemeIcon";
 ---
+<script is:inline>
+// Loading dark mode on save
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+document.documentElement.classList.toggle('dark', isDarkMode);
+</script>
+
+<ThemeIcon client:only/>
+
 <header class="group h-32 bg-white dark:bg-zinc-600 rounded-b-3xl grid grid-cols-4 content-center gap-10 px-40 absolute top-0 right-0 left-0 shadow-2xl hover:h-40 transition-all">
   <h3 class="col-span-1 grid content-center font-bold w-fit"><a href="/">Barrington Computer Club</a></h3>
 
@@ -14,7 +23,7 @@ import ThemeIcon from "../components/ThemeIcon";
 
 </header>
 
-<ThemeIcon client:only />
+
 
 <style>
 body {
