@@ -4,10 +4,16 @@ body {
   background-color: #ebebeb;
 }
 
+.dark body {
+  background-color: theme('colors.zinc.700');
+}
+
+
 h1 {
   font-size: 3.5rem;
   font-weight: 800;
 }
+
 
 h2 {
   font-size: 2rem;
@@ -24,3 +30,15 @@ p {
 }
 
 
+.dark h1 {
+  color: theme('colors.zinc.100');
+}
+.dark h2 {
+  color: theme('colors.zinc.100');
+}
+.dark h3 {
+  color: theme('colors.zinc.100');
+}
+.dark p {
+  color: theme('colors.zinc.100');
+}

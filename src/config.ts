@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = "Barrington Computer Club";
 export const SITE_DESCRIPTION = 'The CS Community of Barrington High School';
+

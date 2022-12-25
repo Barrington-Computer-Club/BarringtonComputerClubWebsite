@@ -1,16 +1,28 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import "../styles/global.css";
+import ThemeIcon from "../components/ThemeIcon";
 ---
-<header class="group h-32 bg-white rounded-b-3xl grid grid-cols-4 content-center gap-10 px-40 absolute top-0 right-0 left-0 shadow-2xl hover:h-40 transition-all">
+<script is:inline>
+// Loading dark mode on save
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+document.documentElement.classList.toggle('dark', isDarkMode);
+</script>
+
+<ThemeIcon client:only/>
+
+<header class="group h-32 bg-white dark:bg-zinc-600 rounded-b-3xl grid grid-cols-4 content-center gap-10 px-40 absolute top-0 right-0 left-0 shadow-2xl hover:h-40 transition-all">
   <h3 class="col-span-1 grid content-center font-bold w-fit"><a href="/">Barrington Computer Club</a></h3>
 
   <div class='grid grid-cols-3 gap-5 col-span-3 max-w-4xl'>
-    <HeaderLink href='/collaborativeCSLearning'>Collaborative CS Learning</HeaderLink>
-    <HeaderLink href='/presentationsAndPosts'>Presentations and Posts</HeaderLink>
-    <HeaderLink href='/competitions'>Competitions</HeaderLink>
+    <HeaderLink href='/collaborativeCSLearning'><p>Collaborative CS Learning</p></HeaderLink>
+    <HeaderLink href='/presentationsAndPosts'><p>Presentations and Posts</p></HeaderLink>
+    <HeaderLink href='/competitions'><p>Competitions</p></HeaderLink>
   </div>
+
 </header>
+
 
 
 <style>
