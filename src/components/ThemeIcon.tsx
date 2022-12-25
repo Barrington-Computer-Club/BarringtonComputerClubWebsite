@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "@theme-toggles/react/css/Within.css"
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
+
+// This is a client:load component only so it will not load during SSR, and will always have access to the brower apis
+
 const ThemeIcon = () => {
-  const [isDarkMode, setDarkMode] = React.useState(false);
+  const darkMode = localStorage.getItem('darkMode') === 'true';
+  const [isDarkMode, setDarkMode] = React.useState(darkMode);
 
   const toggleDarkMode = (checked: boolean) => {
     setDarkMode(checked);
   };
 
-  document.documentElement.classList.toggle('dark', isDarkMode);
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDarkMode);
+    localStorage.setItem('darkMode', isDarkMode.toString());
+  }, [isDarkMode])
+
+
+
+
 
   return (
     <DarkModeSwitch
