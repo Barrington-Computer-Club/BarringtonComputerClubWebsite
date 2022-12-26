@@ -6,20 +6,29 @@ import '../styles/global.css'
 ---
 
 
+<html>
 
-<Header />
+  <head>
+    {/* Add an icon to the tab */}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Barrington Computer Club</title>
+
+    <script is:inline>
+    // Loading dark mode on save
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    document.documentElement.classList.toggle('dark', isDarkMode);
+    </script>
+
+  </head>
+
+  <Header />
+
+  <ThemeIcon client:only />
 
 
-<script is:inline>
-// Loading dark mode on save
-const isDarkMode = localStorage.getItem('darkMode') === 'true';
+  <slot />
 
-document.documentElement.classList.toggle('dark', isDarkMode);
-</script>
-
-<ThemeIcon client:only />
-
-
-<slot />
-
-<Footer />
+  <Footer />
+</html>
