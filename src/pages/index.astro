@@ -1,59 +1,58 @@
 ---
 import NavigationItem from "../components/NavigationItem.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import '../styles/global.css';
 import { Icon } from "astro-icon";
+import MainPage from "../layouts/MainPage.astro";
 ---
 
-<Header />
+<MainPage>
+  <div class="container pt-10 xl:max-w-7xl lg:flex justify-center content-center mx-auto lg:py-40"> 
+    <div class="group shadow-2xl relative my-auto p-8 h-min basis-8/12 rounded-xl bg-white dark:bg-zinc-600 z-10">
+      <h2 class="text-center mb-5 pb-1">The CS Community of Barrington High School</h2>
+      <div class=" flex w-3/4 mx-auto">
+        <p class="basis-1/4 font-bold">Main Goal</p>
+        <p class="basis-3/4">Computer club should be a place that exposes its members to the different aspects of computer science with the goal of creating strong, life long CS interests.</p>
+      </div>
+    </div>
 
-<div class="container pt-10 xl:max-w-7xl lg:flex justify-center content-center mx-auto lg:py-40"> 
-  <div class="group shadow-2xl relative my-auto p-8 h-min basis-8/12 rounded-xl bg-white dark:bg-zinc-600 z-10">
-    <h2 class="text-center mb-5 pb-1">The CS Community of Barrington High School</h2>
-    <div class=" flex w-3/4 mx-auto">
-      <p class="basis-1/4 font-bold">Main Goal</p>
-      <p class="basis-3/4">Computer club should be a place that exposes its members to the different aspects of computer science with the goal of creating strong, life long CS interests.</p>
+    <div class="w-3/4 -mt-40 mx-auto lg:mt-0 lg:-mb-36 lg:-ml-20 lg:basis-4/12">
+      <img id='computer' class="w-full" alt="Illustration of a computer" src="/3d-fluency-laptop.png">
+    </div>
+
+  </div>
+
+  <div class="w-10/12 mb-10 mx-auto rounded-2xl">
+    <h1 class="font-bold text-center text-4xl mb-6">What We Do</h1>
+    <div class='grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10'>
+      <NavigationItem 
+        name="Collaborative CS Learning" 
+        description="This includes our CS basics reference guide and the framework for reviewing code and projects on discord so that all members can improve their code skills" 
+        href="/collaborativeCSLearning"
+      >
+        <Icon size="3rem" class="dark:text-zinc-100 group-hover:text-white my-auto" name="dashicons:welcome-learn-more" />
+      </NavigationItem>
+
+      <NavigationItem 
+        name="Presentations and Posts" 
+        description="This is an blog-style archive of our upcoming and past CS presentations as well as posts about CS topics" 
+        href="/presentationsAndPosts"
+      >
+        <Icon size="3rem" class="dark:text-zinc-100 group-hover:stroke-white group-hover:text-white my-auto" name="mdi:presentation" />
+      </NavigationItem>
+
+      <NavigationItem 
+        name="Competitions" 
+        description="This serves as a reference for our upcoming competitions and a publishing medium for recognizing competition participation" 
+        href="/competitions"
+      >
+        <Icon size="3rem" class="dark:text-zinc-100 group-hover:stroke-white group-hover:text-white my-auto" name="iconoir:leaderboard-star" />
+      </NavigationItem>
+
     </div>
   </div>
 
-  <div class="w-3/4 -mt-40 mx-auto lg:mt-0 lg:-mb-36 lg:-ml-20 lg:basis-4/12">
-    <img id='computer' class="w-full" alt="Illustration of a computer" src="/3d-fluency-laptop.png">
-  </div>
+</MainPage>
 
-</div>
-
-<div class="w-10/12 mb-10 mx-auto rounded-2xl">
-  <h1 class="font-bold text-center text-4xl mb-6">What We Do</h1>
-  <div class='grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10'>
-    <NavigationItem 
-      name="Collaborative CS Learning" 
-      description="This includes our CS basics reference guide and the framework for reviewing code and projects on discord so that all members can improve their code skills" 
-      href="/collaborativeCSLearning"
-    >
-      <Icon size="3rem" class="dark:text-zinc-100 group-hover:text-white my-auto" name="dashicons:welcome-learn-more" />
-    </NavigationItem>
-
-    <NavigationItem 
-      name="Presentations and Posts" 
-      description="This is an blog-style archive of our upcoming and past CS presentations as well as posts about CS topics" 
-      href="/presentationsAndPosts"
-    >
-      <Icon size="3rem" class="dark:text-zinc-100 group-hover:stroke-white group-hover:text-white my-auto" name="mdi:presentation" />
-    </NavigationItem>
-
-    <NavigationItem 
-      name="Competitions" 
-      description="This serves as a reference for our upcoming competitions and a publishing medium for recognizing competition participation" 
-      href="/competitions"
-    >
-      <Icon size="3rem" class="dark:text-zinc-100 group-hover:stroke-white group-hover:text-white my-auto" name="iconoir:leaderboard-star" />
-    </NavigationItem>
-
-  </div>
-</div>
-
-<Footer />
 
 
 <style>
