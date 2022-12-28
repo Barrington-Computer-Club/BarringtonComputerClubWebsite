@@ -1,5 +1,5 @@
 import HamburgerMenu from "hamburger-react";
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Hamburger.css"
 
 
