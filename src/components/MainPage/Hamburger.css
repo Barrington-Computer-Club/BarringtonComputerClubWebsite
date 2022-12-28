@@ -1,0 +1,6 @@
+.hamburger-react {
+}
+
+.hamburger-react > div {
+  @apply dark:!bg-white
+}

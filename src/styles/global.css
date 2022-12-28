@@ -1,44 +1,28 @@
 @import '@fontsource/montserrat';
 
-body {
-  background-color: #ebebeb;
+@tailwind base;
+
+@layer base {
+  body {
+    @apply bg-gray-200 dark:bg-zinc-700
+  }
+  h1 {
+    @apply dark:text-zinc-100 text-2xl sm:text-5xl font-bold 
+  }
+  h2 {
+    @apply dark:text-zinc-100 text-xl sm:text-4xl font-bold;
+  }
+  h3 {
+    @apply dark:text-zinc-100 text-lg sm:text-2xl font-bold;
+  }
+  p {
+    @apply dark:text-zinc-100 text-xs sm:text-lg
+  }
 }
 
-.dark body {
-  background-color: theme('colors.zinc.700');
-}
+@tailwind components;
+@tailwind utilities;
 
 
-h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-}
 
 
-h2 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-p {
-  font-size: 1.25rem;
-}
-
-
-.dark h1 {
-  color: theme('colors.zinc.100');
-}
-.dark h2 {
-  color: theme('colors.zinc.100');
-}
-.dark h3 {
-  color: theme('colors.zinc.100');
-}
-.dark p {
-  color: theme('colors.zinc.100');
-}

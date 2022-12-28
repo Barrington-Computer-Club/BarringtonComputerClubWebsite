@@ -24,7 +24,7 @@ const ThemeIcon = () => {
 
   return (
     <DarkModeSwitch
-      style={{ position: 'fixed', bottom: '1rem', right: '1rem' }}
+      style={{ position: 'fixed', bottom: '1rem', right: '1rem', zIndex: 9999 }}
       checked={isDarkMode}
       onChange={toggleDarkMode}
       size={50}

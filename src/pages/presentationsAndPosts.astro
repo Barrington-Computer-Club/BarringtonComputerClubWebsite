@@ -20,27 +20,27 @@ const post2 = posts[1]
 
 <MainPage>
 
-  <div class="container pt-20 mx-auto">
+  <div class="w-11/12 pt-20 mx-auto">
 
     <div class="w-3/4 mx-auto mb-10">
       <h1 class="font-bold mb-5">Presentations and Posts</h1>
       <p>A collection of recent CS presentations and posts. <br /><br /> Computer Club members are encouraged to make side-projects and learn cool CS topics. Members share their projects/learning through in-person presentations or share through writing blog posts.</p>
     </div> 
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
       <BackgroundImage 
-        className="bg-white group lg:col-span-2 rounded-2xl shadow-2xl grid grid-cols-3" 
+        className="bg-white group sm:col-span-2 rounded-2xl shadow-2xl grid grid-cols-3" 
         image={featured.frontmatter.heroImage}
       >
         <div class="flex flex-col bg-black/50 backdrop-blur-sm transition-all col-span-2 rounded-l-2xl p-9">
           <h1 class="font-bold text-white">{featured.frontmatter.title}</h1>
           <p class="text-gray-300 mt-4">Author: {featured.frontmatter.author}</p>
           <p class="text-2xl mt-4 text-white">{featured.frontmatter.description}</p>
-          <button class="w-40 border-white border-2 hover:bg-sky-400 hover:border-sky-400 hover:scale-110 transition-transform mt-10 lg:mt-auto text-white rounded-full px-5 py-2"><a href={featured.url}>Read More</a></button>
+          <button class="w-40 border-white border-2 hover:bg-sky-400 hover:border-sky-400 hover:scale-110 transition-transform mt-10 sm:mt-auto text-white rounded-full px-5 py-2"><a href={featured.url}>Read More</a></button>
         </div>
       </BackgroundImage>
 
-      <div class="grid grid-flow-row grid-cols-2 lg:grid-cols-1 lg:grid-rows-2 lg:grid-flow-col gap-5">
+      <div class="grid grid-flow-row grid-cols-2 sm:grid-cols-1 lg:grid-rows-2 lg:grid-flow-col gap-5">
         <PostPresentationPreview
           descirption={post1.frontmatter.description}
           image={post1.frontmatter.heroImage}
@@ -61,7 +61,7 @@ const post2 = posts[1]
 
     <h2 class="text-center font-bold py-2 mt-20 mb-10">All Presentations/Posts</h2>
 
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
       {posts.map((post) => (
         <PostPresentationPreview
           descirption={post.frontmatter.description}

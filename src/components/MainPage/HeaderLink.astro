@@ -1,0 +1,10 @@
+---
+interface Props {
+  href: string,
+}
+
+const {href} = Astro.props;
+---
+
+
+<a class="group-hover:bg-[#ebebeb] dark:group-hover:bg-zinc-700 group-hover:shadow-md hover:!bg-sky-400 hover:text-white h-20 text-center grid content-center p-5 rounded-full hover:scale-105 hover:!shadow-xl transition-all mb-5 sm:mb-0" href={href}><slot></slot></a>

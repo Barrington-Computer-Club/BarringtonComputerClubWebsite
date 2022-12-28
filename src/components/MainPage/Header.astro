@@ -1,0 +1,35 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import "../../styles/global.css";
+import Hamburger from "./Hamburger";
+---
+
+<header class="group h-32 bg-white dark:bg-zinc-600 rounded-b-3xl grid grid-cols-2 sm:grid-cols-4 content-center gap-10 px-5 sm:px-40 absolute top-0 right-0 left-0 shadow-2xl sm:hover:h-40 transition-all">
+  <h3 class="hidden sm:grid col-span-1 content-center font-bold w-fit text-sm sm:text-2xl"><a href="/">Barrington Computer Club</a></h3>
+
+  <h3 class="sm:hidden mx-auto text-sm sm:text-2xl"><a href="/">Barrington Computer Club</a></h3>
+
+
+  <div class='hidden sm:grid grid-cols-3 gap-5 col-span-3 sm:max-w-4xl'>
+    <HeaderLink href='/collaborativeCSLearning'><p>Collaborative CS Learning</p></HeaderLink>
+    <HeaderLink href='/presentationsAndPosts'><p>Presentations and Posts</p></HeaderLink>
+    <HeaderLink href='/competitions'><p>Competitions</p></HeaderLink>
+  </div>
+
+  <Hamburger className="sm:hidden ml-auto" client:load >
+    <HeaderLink href='/collaborativeCSLearning'><p>Collaborative CS Learning</p></HeaderLink>
+    <HeaderLink href='/presentationsAndPosts'><p>Presentations and Posts</p></HeaderLink>
+    <HeaderLink href='/competitions'><p>Competitions</p></HeaderLink>
+  </Hamburger>
+
+</header>
+
+
+
+<style>
+body {
+  margin-top: 8rem;
+  padding-top: 0;
+}
+</style>
+

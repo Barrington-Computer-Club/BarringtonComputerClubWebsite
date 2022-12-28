@@ -6,7 +6,7 @@ module.exports = {
 	theme: {
     fontFamily: {
       sans: ['montserrat'],
-    }
+    },
 	},
 	plugins: [],
 }
