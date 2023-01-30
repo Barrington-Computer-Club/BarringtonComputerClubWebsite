@@ -22,12 +22,12 @@ const post2 = posts[1]
 
   <div class="w-11/12 pt-20 mx-auto">
 
-    <div class="w-3/4 mx-auto mb-10">
+    <div class="w-9/12 mx-auto mb-10">
       <h1 class="font-bold mb-5">Presentations and Posts</h1>
       <p>A collection of recent CS presentations and posts. <br /><br /> Computer Club members are encouraged to make side-projects and learn cool CS topics. Members share their projects/learning through in-person presentations or share through writing blog posts.</p>
     </div> 
 
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:w-9/12 mx-auto">
       <BackgroundImage 
         className="bg-white group sm:col-span-2 rounded-2xl shadow-2xl grid grid-cols-3" 
         image={featured.frontmatter.heroImage}
@@ -61,7 +61,7 @@ const post2 = posts[1]
 
     <h2 class="text-center font-bold py-2 mt-20 mb-10">All Presentations/Posts</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-9/12 mx-auto">
       {posts.map((post) => (
         <PostPresentationPreview
           descirption={post.frontmatter.description}
