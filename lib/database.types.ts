@@ -52,6 +52,7 @@ export interface Database {
         Row: {
           blog_post: string
           content: string
+          date: string
           id: number
           title: string | null
           user_id: string
@@ -59,6 +60,7 @@ export interface Database {
         Insert: {
           blog_post: string
           content: string
+          date: string
           id?: number
           title?: string | null
           user_id: string
@@ -66,6 +68,7 @@ export interface Database {
         Update: {
           blog_post?: string
           content?: string
+          date?: string
           id?: number
           title?: string | null
           user_id?: string
