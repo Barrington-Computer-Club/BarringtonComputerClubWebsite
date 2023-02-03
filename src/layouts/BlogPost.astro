@@ -1,18 +1,26 @@
 ---
 import MainPage from './MainPage.astro';
+import './BlogPostStyles.css'
 
 export interface Props {
 	content: {
 		title: string;
+    file: string;
 		pubDate?: string;
 		updatedDate?: string;
 		heroImage?: string;
+    author?: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, author, pubDate, updatedDate, heroImage, file},
 } = Astro.props;
+
+import Comments from "../components/Comments";
+
+const posts = await Astro.glob('../pages/posts/*.md');
+
 ---
 
 <MainPage>
@@ -37,11 +45,16 @@ const {
           </div>
         ) }
       </div>
-    )
-    }
-  <hr />
-    <slot />
-  </article>
+
+
+
+      <slot />
+
+    </article>
+
+    <Comments client:only posts={posts} name={file} />
+  </div>
 
 </MainPage>
+
 

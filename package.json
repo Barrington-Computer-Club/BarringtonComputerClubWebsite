@@ -20,6 +20,7 @@
     "@astrojs/vercel": "^2.3.6",
     "@fontsource/montserrat": "^4.5.13",
     "@fontsource/mulish": "^4.5.13",
+    "@supabase/supabase-js": "^2.7.0",
     "@theme-toggles/react": "^4.1.0",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
@@ -32,5 +33,8 @@
     "react-dom": "^18.2.0",
     "react-toggle-dark-mode": "^1.1.1",
     "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "supabase": "^1.36.2"
   }
 }

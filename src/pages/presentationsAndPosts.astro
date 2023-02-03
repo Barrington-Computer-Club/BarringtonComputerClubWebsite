@@ -8,7 +8,7 @@ import MainPage from "../layouts/MainPage.astro";
 
 
 
-const posts = (await Astro.glob('./posts/*.{md,mdx}')).sort(
+const posts = (await Astro.glob('./posts/*.md')).sort(
   (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
 
