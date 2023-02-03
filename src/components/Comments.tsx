@@ -1,11 +1,13 @@
 import type { MarkdownInstance } from "astro"
 import { useEffect, useState } from "react"
+import type { Database } from "../../lib/database.types"
 import { supabase } from "../database/supabaseClient"
 import { syncBlogPosts } from "../database/syncBlogPosts"
 
+type DatabaseComment = Database["public"]["Tables"]["comments"]["Row"]
 
 export default function Comments(props: {posts: MarkdownInstance<Record<string, any>>[], name: string}) {
-  const [comments, setComments] = useState<{content: string, title: string | null}[]>()
+  const [comments, setComments] = useState<DatabaseComment[]>()
 
   const {posts, name} = props
 
@@ -19,19 +21,20 @@ export default function Comments(props: {posts: MarkdownInstance<Record<string, 
 
     if (error) {
       console.log(error)
+      return;
     }
 
-    const comments = data?.map((d) => ({
-      title: d.Title,
-      content: d.Content
-    }))
+    if (data === null) {
+      console.log("There is no comments for the blog post")
+      return;
+    }
 
-    setComments(comments)
+    setComments(data)
 
   }
 
   const addComment = async (title: string, content: string) => {
-    const {data, error} = await supabase.from('comments').insert({Title: title, Content: content, blog_post: name, user_id: '5cec3d82-1d9a-4f1a-9e64-e62a029a2baf'})
+    const {data, error} = await supabase.from('comments').insert({title: title, content: content, blog_post: name, user_id: '5cec3d82-1d9a-4f1a-9e64-e62a029a2baf'})
     console.log(data)
     console.log(error)
   }
@@ -48,7 +51,7 @@ export default function Comments(props: {posts: MarkdownInstance<Record<string, 
   )
 }
 
-function CommentsDisplay(props: {comments?: {title: string | null, content: string}[] | null}) {
+function CommentsDisplay(props: {comments?: DatabaseComment[] | null}) {
   const {comments} = props
 
   return (

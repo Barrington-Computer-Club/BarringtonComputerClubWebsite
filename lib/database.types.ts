@@ -37,37 +37,37 @@ export interface Database {
       blog_posts: {
         Row: {
           file_name: string
-          Title: string | null
+          title: string | null
         }
         Insert: {
           file_name: string
-          Title?: string | null
+          title?: string | null
         }
         Update: {
           file_name?: string
-          Title?: string | null
+          title?: string | null
         }
       }
       comments: {
         Row: {
           blog_post: string
-          Content: string
+          content: string
           id: number
-          Title: string | null
+          title: string | null
           user_id: string
         }
         Insert: {
           blog_post: string
-          Content: string
+          content: string
           id?: number
-          Title?: string | null
+          title?: string | null
           user_id: string
         }
         Update: {
           blog_post?: string
-          Content?: string
+          content?: string
           id?: number
-          Title?: string | null
+          title?: string | null
           user_id?: string
         }
       }
