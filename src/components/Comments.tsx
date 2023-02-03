@@ -1,6 +1,6 @@
 import type { MarkdownInstance } from "astro"
 import { AiOutlineCalendar } from "react-icons/ai"
-import { BsTrashFill } from "react-icons/bs"
+// import { BsTrashFill } from "react-icons/bs"
 import { useEffect, useState } from "react"
 import type { Database } from "../../lib/database.types"
 import { supabase } from "../database/supabaseClient"
@@ -31,6 +31,8 @@ export default function Comments(props: {posts: MarkdownInstance<Record<string, 
       return;
     }
 
+    console.log(data)
+
     setComments(data)
 
   }
@@ -53,7 +55,7 @@ export default function Comments(props: {posts: MarkdownInstance<Record<string, 
               await addComment(content)
               await getComments()
           }} />
-      {comments ? <CommentsDisplay comments={comments} /> : null } 
+      {comments != null && comments.length != 0 ? <CommentsDisplay comments={comments} /> : null } 
     </div>
   )
 }
@@ -97,7 +99,21 @@ function AddComments(props: {add: (content: string) => void}) {
 
   return (
     <div className="sm:w-7/12 mx-auto text-center group p-10 mt-10 transition-all flex flex-row gap-5 justify-center item-center">
-      <input className="bg-none group-hover:shadow-lg transition-all active:outline-none rounded-3xl focus:outline-none w-full p-5 text-2xl" type="text" placeholder="Add a comment..." value={content} onChange={(e) => setContent(e.target.value)} />
+      <input 
+        className="bg-none group-hover:shadow-lg transition-all active:outline-none rounded-3xl focus:outline-none w-full p-5 text-2xl" 
+        type="text" 
+        placeholder="Add a comment..." 
+        value={content} 
+        onChange={function(e) {
+          return setContent(e.target.value)
+        }}
+        onKeyDown={function(e) {
+          if (e.key === 'Enter'){
+            add(content)
+            setContent('')
+          } 
+        }}
+      />
       <button className="hover:bg-white hover:shadow-lg active:scale-95 px-3 transition-all rounded-full" onClick={() => add(content)}>Add</button>
     </div>
   )
