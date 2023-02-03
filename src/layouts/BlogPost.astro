@@ -16,14 +16,26 @@ const {
 ---
 
 <MainPage>
-  <article>
-    {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-    <h1 class="title">{title}</h1>
-    {pubDate && <time>{pubDate}</time>}
-    {
-    updatedDate && (
-      <div>
-        Last updated on <time>{updatedDate}</time>
+  <div class="pt-20">
+    <article class="py-10 bg-white rounded-3xl shadow-xl sm:w-7/12 mx-auto px-20">
+
+      <h1  class="my-10 text-8xl text-center">{title}</h1>
+      {heroImage && <img width={720} class="rounded-lg mx-auto" height={360} src={heroImage} alt="" />}
+
+
+      <div class="flex flex-row justify-center items-center gap-2 my-10">
+        {pubDate && <div class="rounded-full bg-gray-200 p-2 w-fit"><time>{pubDate}</time></div>}
+
+        { updatedDate && (
+          <div class="rounded-full text-gray-400 bg-gray-200 p-2 w-fit">
+            Last updated on <time class="text-gray-900">{updatedDate}</time>
+          </div>
+        ) }
+        { author && (
+          <div class="rounded-full text-gray-400 bg-gray-200 p-2 w-fit">
+            Author: <time class="text-gray-900">{author}</time>
+          </div>
+        ) }
       </div>
     )
     }

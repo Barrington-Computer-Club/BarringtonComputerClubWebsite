@@ -1,0 +1,7 @@
+p {
+  @apply my-3 
+}
+
+h1 {
+  @apply font-extrabold my-7
+}
