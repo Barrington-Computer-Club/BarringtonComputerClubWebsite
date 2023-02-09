@@ -14,10 +14,18 @@ import image from "@astrojs/image";
 // https://astro.build/config
 
 // https://astro.build/config
+import vercel from "@astrojs/vercel/serverless";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
   integrations: [mdx(), sitemap(), react(), tailwind({
-    config: { applyBaseStyles: false }
-  }), image()],
-  output: 'server'
+    config: {
+      applyBaseStyles: false
+    }
+  }), image()]
+  // output: 'server'
+  ,
+  output: "server",
+  adapter: vercel()
 });

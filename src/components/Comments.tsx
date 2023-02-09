@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import type { Database } from "../../lib/database.types"
 import { supabase } from "../database/supabaseClient"
 import { syncBlogPosts } from "../database/syncBlogPosts"
+import LoginModal from "./LoginModal"
 
 type DatabaseComment = Database["public"]["Tables"]["comments"]["Row"]
 
@@ -37,11 +38,21 @@ export default function Comments(props: {posts: MarkdownInstance<Record<string, 
 
   }
 
+  const getUser = async () => {
+    const {data, error} = await supabase.auth.getSession()
+
+    console.log("User data", data, error)
+
+  }
+
   const addComment = async (content: string) => {
+
+    await getUser()
+
     const {data, error} = await supabase.from('comments').insert({
       content: content,
       blog_post: name,
-      user_id: '5cec3d82-1d9a-4f1a-9e64-e62a029a2baf',
+      user_id: '',
       date: new Date().toISOString()
     })
     console.log(data)
@@ -56,6 +67,8 @@ export default function Comments(props: {posts: MarkdownInstance<Record<string, 
               await getComments()
           }} />
       {comments != null && comments.length != 0 ? <CommentsDisplay comments={comments} /> : null } 
+
+      <LoginModal />
     </div>
   )
 }
@@ -114,7 +127,10 @@ function AddComments(props: {add: (content: string) => void}) {
           } 
         }}
       />
-      <button className="hover:bg-white hover:shadow-lg active:scale-95 px-3 transition-all rounded-full" onClick={() => add(content)}>Add</button>
+      <button className="hover:bg-white hover:shadow-lg active:scale-95 px-3 transition-all rounded-full" onClick={() => {
+              add(content)
+              setContent('')
+          }}>Add</button>
     </div>
   )
 }
