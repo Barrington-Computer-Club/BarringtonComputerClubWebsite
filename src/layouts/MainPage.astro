@@ -1,0 +1,28 @@
+---
+import Header from "../components/header";
+const {title} = Astro.props
+import "cal-sans"
+import '@fontsource/montserrat'
+import "@/styles/globals.css";
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{title}</title>
+    <ViewTransitions />
+
+  </head>
+  <body>
+
+
+    <Header client:load />
+
+    <slot /> <!-- your content is injected here -->
+
+
+  </body>
+</html>

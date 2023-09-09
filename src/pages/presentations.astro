@@ -1,0 +1,44 @@
+---
+import MainPage from "../layouts/MainPage.astro";
+import {Button} from "@/components/ui/button"
+import {Badge} from "@/components/ui/badge"
+import {Separator} from "@/components/ui/separator"
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+import {getCollection, getEntry} from "astro:content"
+
+const allPresentations = await getCollection("presentations")
+
+---
+
+<MainPage title="Archived Presentations">
+
+  <div class="h-screen mt-44 px-20 w-6/12 mx-auto flex flex-col gap-4">
+    <h2 class="">Archived Presentations</h2>
+
+    <p class="text-lg">These are presentations on computer science and software engineering. Categories for past and future presentations mainly include frontend, backend, fullstack, systems design, datastructures, and algorithms. Below are the materials used for the presentations</p>
+
+    <Separator />
+
+    <div class="grid grid-cols-3 gap-3">
+      {allPresentations.map(p => 
+        <Card>
+          <CardHeader>
+            <CardTitle>{p.data.title}</CardTitle>
+            <CardDescription>{p.data.description}</CardDescription>
+          </CardHeader>
+        </Card>
+      )}
+    </div>
+
+  </div>
+
+</MainPage>
