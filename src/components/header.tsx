@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/button"
 export default function Header() {
   return <nav className="absolute top-0 right-0 left-0 flex flex-row gap-2 px-20 h-20 items-center">
 
-    <a href="/"><h3>Barrington Computer Club</h3></a>
+    <a rel="prefetch" href="/"><h3>Barrington Computer Club</h3></a>
 
     <NavigationMenu>
 
@@ -76,7 +76,7 @@ export default function Header() {
 }
 
 function NavigationLink(props: {title: string, description?: string, href?: string}) {
-  return <a href={props.href} className="flex flex-col hover:bg-secondary transition-all px-3 py-1 rounded-lg">
+  return <a rel="prefetch" href={props.href} className="flex flex-col hover:bg-secondary transition-all px-3 py-1 rounded-lg">
     <h4>{props.title}</h4>
     <p className="text-xs">{props.description}</p>
   </a>
