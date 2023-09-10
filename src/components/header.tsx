@@ -64,7 +64,7 @@ export default function Header() {
     <div className="ml-auto">
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger><a href="https://github.com/Feel-ix-343/BarringtonComputerClubWebsite"><img width="50" src="https://img.icons8.com/3d-fluency/94/github.png" alt="github" /></a></TooltipTrigger>
+          <TooltipTrigger><a rel="prefetch" href="https://github.com/Feel-ix-343/BarringtonComputerClubWebsite"><img width="50" src="https://img.icons8.com/3d-fluency/94/github.png" alt="github" /></a></TooltipTrigger>
           <TooltipContent>
             <p>View Source Code</p>
           </TooltipContent>
