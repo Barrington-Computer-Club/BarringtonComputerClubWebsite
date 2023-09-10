@@ -7,6 +7,11 @@ import prefetch from "@astrojs/prefetch";
 // https://astro.build/config
 export default defineConfig({
   // PORT 
+  vite: {
+    ssr: {
+      noExternal: ["react-icons"]
+    }
+  },
   server: {
     port: 3000
   },
