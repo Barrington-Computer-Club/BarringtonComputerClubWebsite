@@ -44,6 +44,7 @@
     "@radix-ui/react-tooltip": "^1.0.6",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "@vercel/analytics": "^1.0.2",
     "astro": "^3.0.7",
     "cal-sans": "^1.0.1",
     "class-variance-authority": "^0.7.0",

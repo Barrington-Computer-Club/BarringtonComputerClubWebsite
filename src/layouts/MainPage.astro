@@ -5,6 +5,7 @@ import "cal-sans"
 import '@fontsource/montserrat'
 import "@/styles/globals.css";
 import { ViewTransitions } from 'astro:transitions';
+import { Analytics } from "@vercel/analytics/react"
 ---
 
 <html lang="en">
@@ -22,6 +23,8 @@ import { ViewTransitions } from 'astro:transitions';
     <Header client:load />
 
     <slot /> <!-- your content is injected here -->
+
+    <Analytics client:load />
 
   </body>
 </html>
