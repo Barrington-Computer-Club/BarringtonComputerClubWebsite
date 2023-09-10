@@ -16,6 +16,12 @@ import {
 import {getCollection, getEntry} from "astro:content"
 
 const allPresentations = await getCollection("presentations")
+const today = new Date()
+const presentations = allPresentations.slice()
+  .sort((a, b) => (b.data.presentationDate?.getTime() ?? 0) - (a.data.presentationDate?.getTime() ?? 0))
+  .filter(p => (p.data.presentationDate?.getTime() ?? 0) < today.getTime())
+
+console.log(presentations[0].data.presentationDate?.getTime(), today.getTime())
 
 ---
 
@@ -29,11 +35,13 @@ const allPresentations = await getCollection("presentations")
     <Separator />
 
     <div class="grid grid-cols-3 gap-3">
-      {allPresentations.map(p => 
+      {presentations.map(p => 
         <Card>
           <CardHeader>
+            {p.data.image && <img width="375" height="375" src={p.data.image} alt={p.data.alt}/>}
             <CardTitle>{p.data.title}</CardTitle>
             <CardDescription>{p.data.description}</CardDescription>
+            {p.data.presentationDate && <Badge variant={"outline"} className="w-min">{p.data.presentationDate.toLocaleDateString()}</Badge>}
           </CardHeader>
         </Card>
       )}

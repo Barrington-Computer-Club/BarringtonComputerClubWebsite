@@ -1,0 +1,13 @@
+---
+import MainPage from "../layouts/MainPage.astro"
+import Calendar from "@/components/calendar"
+---
+
+<MainPage>
+  <div class="mt-44 px-20 w-6/12 mx-auto flex flex-col gap-4">
+    <h2 class="">Upcoming Events</h2>
+
+    <p class="text-lg">These are the upcoming events for computer club. Presentations, competitions, project openings and other announcements are all shown here</p>
+  </div>
+    <Calendar client:load />
+</MainPage>

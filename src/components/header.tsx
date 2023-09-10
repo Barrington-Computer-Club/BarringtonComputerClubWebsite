@@ -29,25 +29,31 @@ export default function Header() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger>Upcoming Events</NavigationMenuTrigger>
-          <NavigationMenuContent className="p-6 flex flex-row gap-4">
-            <div className="flex flex-col gap-2 w-52">
-              <p className="">The upcoming events held during Computer Club meetings</p>
-              <Button variant="outline">View All</Button>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4>Featured Events</h4>
+          <NavigationMenuContent className="">
+            <div className="p-6 grid grid-cols-[1fr_2fr] gap-4 w-[400px]">
+              <div className="flex flex-col gap-2">
+                <p className="text-xs">The upcoming events held during Computer Club meetings</p>
+                <NavigationMenuLink><a rel="prefetch" href="/events"><Button variant="outline">View All</Button></a></NavigationMenuLink>
+              </div>
+              <div className="flex flex-col gap-2">
+                <NavigationMenuLink><NavigationLink title="AI Meeting" description="Learn the basics of AI" /></NavigationMenuLink>
+                <NavigationMenuLink><NavigationLink title="Database" description="Learn how apps use databases and the basics of SQL" /></NavigationMenuLink>
+                <NavigationMenuLink><NavigationLink title="Functional Programming" description="Learn the basics of functional programming in Rust" /></NavigationMenuLink>
+              </div>
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuTrigger>Content</NavigationMenuTrigger>
-          <NavigationMenuContent className="p-6 flex flex-row gap-4">
-            <p className="w-60">Content Created by Members of Computer Club</p>
-            <div className="flex flex-col gap-2">
-              <NavigationMenuLink><NavigationLink title="Presentations" description="Content corresponding to presentations given during club meetings" href="/presentations" /></NavigationMenuLink>
-              <NavigationMenuLink><NavigationLink title="Projects" description="Exhibition of projects created by club members" href='/projects' /></NavigationMenuLink>
-              <NavigationMenuLink><NavigationLink title="Blog Posts" description="Blog posts created by club members" href='/posts' /></NavigationMenuLink>
+          <NavigationMenuContent className="">
+            <div className="p-6 w-[450px]">
+              <p className="mb-3">Content Created by Members of Computer Club</p>
+              <div className="flex flex-col gap-2">
+                <NavigationMenuLink><NavigationLink title="Archived Presentations" description="Content corresponding to presentations given during club meetings" href="/presentations" /></NavigationMenuLink>
+                <NavigationMenuLink><NavigationLink title="Projects" description="Exhibition of projects created by club members" href='/projects' /></NavigationMenuLink>
+                <NavigationMenuLink><NavigationLink title="Blog Posts" description="Blog posts created by club members" href='/posts' /></NavigationMenuLink>
+              </div>
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
