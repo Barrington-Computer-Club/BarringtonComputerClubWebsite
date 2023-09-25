@@ -28,7 +28,20 @@ export default function Header() {
       <NavigationMenuList>
 
         <NavigationMenuItem>
-          <NavigationMenuLink><a rel="prefetch" href="/events" className="text-sm">Upcoming Events</a></NavigationMenuLink>
+          <NavigationMenuTrigger>Upcoming Events</NavigationMenuTrigger>
+          <NavigationMenuContent className="">
+            <div className="p-6 grid grid-cols-[1fr_2fr] gap-4 w-[400px]">
+              <div className="flex flex-col gap-2">
+                <p className="text-xs">The upcoming events held during Computer Club meetings</p>
+                <NavigationMenuLink><a rel="prefetch" href="/events"><Button variant="outline">View All</Button></a></NavigationMenuLink>
+              </div>
+              <div className="flex flex-col gap-2">
+                <NavigationMenuLink><NavigationLink title="AI" description="Learn the basics of AI" /></NavigationMenuLink>
+                <NavigationMenuLink><NavigationLink title="Databases" description="Learn how apps use databases and the basics of SQL" /></NavigationMenuLink>
+                <NavigationMenuLink><NavigationLink title="Functional Programming" description="Learn the basics of functional programming in Rust" /></NavigationMenuLink>
+              </div>
+            </div>
+          </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
