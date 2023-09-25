@@ -36,8 +36,8 @@ export default function Header() {
                 <NavigationMenuLink><a rel="prefetch" href="/events"><Button variant="outline">View All</Button></a></NavigationMenuLink>
               </div>
               <div className="flex flex-col gap-2">
-                <NavigationMenuLink><NavigationLink title="AI Meeting" description="Learn the basics of AI" /></NavigationMenuLink>
-                <NavigationMenuLink><NavigationLink title="Database" description="Learn how apps use databases and the basics of SQL" /></NavigationMenuLink>
+                <NavigationMenuLink><NavigationLink title="AI" description="Learn the basics of AI" /></NavigationMenuLink>
+                <NavigationMenuLink><NavigationLink title="Databases" description="Learn how apps use databases and the basics of SQL" /></NavigationMenuLink>
                 <NavigationMenuLink><NavigationLink title="Functional Programming" description="Learn the basics of functional programming in Rust" /></NavigationMenuLink>
               </div>
             </div>
