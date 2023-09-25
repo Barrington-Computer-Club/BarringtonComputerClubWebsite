@@ -21,8 +21,6 @@ const presentations = allPresentations.slice()
   .sort((a, b) => (b.data.presentationDate?.getTime() ?? 0) - (a.data.presentationDate?.getTime() ?? 0))
   .filter(p => (p.data.presentationDate?.getTime() ?? 0) < today.getTime())
 
-console.log(presentations[0].data.presentationDate?.getTime(), today.getTime())
-
 ---
 
 <MainPage title="Archived Presentations">

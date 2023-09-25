@@ -12,15 +12,17 @@ export default function() {
   const [month, setMonth] = useState(date.getMonth())
   date.setMonth(month)
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
   const today = new Date()
 
   const dates = []
-  for (let i = 1; i <= 7*5; i++) {
+  for (let i = 0; i < 7*5; i++) {
     const tmpDate = new Date(date)
-    tmpDate.setDate(i)
-    const isNotDate = tmpDate.getDate() !== i
+    tmpDate.setDate(1)
+    tmpDate.setDate( -tmpDate.getDay() + 3 + i ) // Set the first iteration to the first a monday
+
+    const isNotDate = tmpDate.getDate() !== i + 1
     dates.push(<div key={i} className={ (tmpDate.toLocaleDateString() === today.toLocaleDateString() ? "border-secondary-foreground rounded-md " : "") + "border-[1px] p-4" }>
       {i <= 7 ? <p className="text-xs -mt-2">{days.at(tmpDate.getDay() - 1)}</p> : null}
       {<p className={isNotDate ?  "text-gray-400" : ""}> {tmpDate.getDate()}</p>}
