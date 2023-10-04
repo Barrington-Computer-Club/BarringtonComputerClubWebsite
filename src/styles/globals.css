@@ -93,3 +93,12 @@
     @apply text-primary
   }
 }
+
+html.dark {
+  background-color: #0d0950 !important;
+  color: #fff !important;
+}
+
+.dark .nav-links a {
+  color: #fff !important;
+}
