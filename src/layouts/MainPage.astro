@@ -7,7 +7,7 @@ import "@/styles/globals.css";
 import { ViewTransitions } from 'astro:transitions';
 import { Analytics } from "@vercel/analytics/react"
 
-const page = Astro.url.pathname
+const page = Astro.url.pathname.at(-1) === "/" ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname
 ---
 
 <html lang="en">

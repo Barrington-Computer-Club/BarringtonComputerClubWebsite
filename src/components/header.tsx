@@ -19,6 +19,7 @@ import {
 import { Button } from "@/components/ui/button"
 
 export default function Header(props: {currentHref: string}) {
+  console.log(props.currentHref)
   return <nav className="absolute top-0 right-0 left-0 flex flex-row gap-2 px-20 h-20 items-center">
 
     <a rel="prefetch" href="/"><h3>Barrington Computer Club &nbsp;</h3></a>
