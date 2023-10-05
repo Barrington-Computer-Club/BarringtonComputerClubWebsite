@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/tooltip"
 import { Button } from "@/components/ui/button"
 
-export default function Header() {
+export default function Header(props: {currentHref: string}) {
   return <nav className="absolute top-0 right-0 left-0 flex flex-row gap-2 px-20 h-20 items-center">
 
     <a rel="prefetch" href="/"><h3>Barrington Computer Club &nbsp;</h3></a>
@@ -26,14 +26,11 @@ export default function Header() {
     <NavigationMenu>
 
       <NavigationMenuList>
-      {/* Such great web dev */}
-      &nbsp;
-      &nbsp;
-      &nbsp;
-        <NavigationMenuLink><NavigationLink title="Upcoming Events" href="/events" /></NavigationMenuLink>
-        <NavigationMenuLink><NavigationLink title="Community Blog Posts" href="/posts" /></NavigationMenuLink>
-        <NavigationMenuLink><NavigationLink title="Archived Presentations" href="/presentations" /></NavigationMenuLink>
-        <NavigationMenuLink><NavigationLink title="CS Project Gallery" href="/projects" /></NavigationMenuLink>
+
+        <NavigationLink title="Upcoming Events" href="/events" currentHref={props.currentHref} />
+        <NavigationLink title="Community Blog Posts" href="/posts"  currentHref={props.currentHref}/>
+        <NavigationLink title="Archived Presentations" href="/presentations" currentHref={props.currentHref} />
+        <NavigationLink title="CS Project Gallery" href="/projects" currentHref={props.currentHref} />
 
 
       </NavigationMenuList>
@@ -59,9 +56,9 @@ export default function Header() {
   </nav>
 }
 
-function NavigationLink(props: {title: string, description?: string, href?: string}) {
-  return <a rel="prefetch" href={props.href} className="flex flex-col hover:bg-secondary transition-all px-3 py-1 rounded-lg">
-    <h4>{props.title}</h4>
+function NavigationLink(props: {title: string, description?: string, href?: string, currentHref: string}) {
+  return <a rel="prefetch" href={props.href} className={ "flex flex-col hover:bg-secondary transition-all px-3 py-1 rounded-lg" + (props.currentHref === props.href ? " bg-secondary" : "") }>
+    <h4 className="font-sans text-sm">{props.title}</h4>
     <p className="text-xs">{props.description}</p>
   </a>
 }
