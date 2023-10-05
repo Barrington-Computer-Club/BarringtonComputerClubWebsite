@@ -5,7 +5,7 @@ import {getCollection} from "astro:content"
 const presentations = (await getCollection('presentations')).sort((a, b) => a.data.presentationDate - b.data.presentationDate).filter(p => p.data.presentationDate > new Date())
 
 ---
-
+<!--TODO: un-mess up dates of events -->
 <MainPage>
   <div class="mt-44 px-20 w-6/12 mx-auto flex flex-col gap-4 mb-9">
     <h2 class="">Upcoming Events</h2>
