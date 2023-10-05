@@ -43,7 +43,7 @@ export default function Header(props: {currentHref: string}) {
     <div className="ml-auto">
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger><a rel="prefetch" href="https://github.com/Feel-ix-343/BarringtonComputerClubWebsite"><img width="50" src="public/icons8-github-128.png" alt="github" /></a></TooltipTrigger>
+          <TooltipTrigger><a rel="prefetch" href="https://github.com/Feel-ix-343/BarringtonComputerClubWebsite"><img width="50" src="/icons8-github-128.png" alt="github" /></a></TooltipTrigger>
           <TooltipContent>
             <p>View Source Code</p>
           </TooltipContent>
