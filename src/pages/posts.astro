@@ -1,0 +1,53 @@
+---
+import MainPage from "../layouts/MainPage.astro";
+import {Button} from "@/components/ui/button"
+import {Badge} from "@/components/ui/badge"
+import {Separator} from "@/components/ui/separator"
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+import {getCollection, getEntry} from "astro:content"
+
+const posts = await getCollection("posts")
+const today = new Date()
+// const posts = allPosts.slice()
+  
+
+
+
+---
+
+<MainPage title="Posts">
+
+  <div class="h-screen mt-44 px-20 w-6/12 mx-auto flex flex-col gap-4">
+    <h2 class="">Posts</h2>
+
+    <p class="text-lg">Blog posts from the members of computer club.</p>
+
+    <Separator />
+
+    <div class="grid grid-cols-1 gap-3">
+      {posts.map(p => 
+        <Card>
+          <CardHeader>
+
+            <CardTitle>{p.data.title}</CardTitle>
+            <CardDescription><i>{p.data.description}</i> <br> Author: {p.data.author} </CardDescription>
+           {p.data.postDate && <Badge variant={"outline"} className="w-min">{p.data.postDate}</Badge>}
+            
+           </CardHeader>
+          <CardContent>{p.data.content}</CardContent>
+        </Card>
+      )}
+    </div>
+
+  </div>
+
+</MainPage>
