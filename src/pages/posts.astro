@@ -35,16 +35,16 @@ const today = new Date()
 
     <div class="grid grid-cols-1 gap-3">
       {posts.map(p => 
+        <a href={"/posts/" + p.slug}>
         <Card>
           <CardHeader>
 
             <CardTitle>{p.data.title}</CardTitle>
             <CardDescription><i>{p.data.description}</i> <br> Author: {p.data.author} </CardDescription>
-           {p.data.postDate && <Badge variant={"outline"} className="w-min">{p.data.postDate}</Badge>}
             
            </CardHeader>
-          <CardContent>{p.data.content}</CardContent>
         </Card>
+        </a>
       )}
     </div>
 
