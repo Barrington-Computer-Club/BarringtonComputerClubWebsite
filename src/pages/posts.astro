@@ -13,7 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-import {getCollection, getEntry} from "astro:content"
+import {getCollection, getEntry} from "astro/content/posts"
 
 const posts = await getCollection("posts")
 const today = new Date()
@@ -46,7 +46,7 @@ function regFirstWords(s:String, n:number) {
 
             <CardTitle> <a href={"posts/"+p.slug}><u>{p.data.title}</u></a></CardTitle>
             <CardDescription><i>{p.data.description}</i> <br> Author: {p.data.author} </CardDescription>
-           {p.data.postDate && <Badge variant={"outline"} className="w-min">{p.data.postDate}</Badge>}
+           {p.data. && <Badge variant={"outline"} className="w-min">{p.data.postDate}</Badge>}
             
            </CardHeader>
           <CardContent>{p.body}</CardContent>
