@@ -1,0 +1,26 @@
+---
+import MainPage from "@/layouts/MainPage.astro";
+import type { GetStaticPaths } from "astro";
+import { getCollection } from 'astro:content';
+
+export const getStaticPaths = (async () => {
+  const blogEntires = await getCollection('posts')
+  return blogEntires.map(entry => ({
+    params: {slug: entry.slug}, props: {entry}
+  }))
+}) satisfies GetStaticPaths;
+
+const {entry} = Astro.props
+const {Content} = await entry.render()
+---
+<MainPage>
+  <div class="mt-32 w-6/12 mx-auto p-10 shadow-sm border-[1px] rounded-lg text-lg">
+    <Content />
+
+    <style>
+    </style>
+
+
+  </div>
+</MainPage>
+
