@@ -1,6 +1,6 @@
 ---
 title: "The Importance of Computer Science"
-description: "[michhelle do this]"
+description: "michelle's 1st post"
 postDate: "10/6/23"
 author: "Michelle Xian"
 ---
