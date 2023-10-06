@@ -1,0 +1,10 @@
+---
+import MainPage from './MainPage.astro'
+
+const {frontmatter} = Astro.props;
+---
+
+<MainPage>
+  <h1>Blog Post</h1>
+  <slot />
+</MainPage>
