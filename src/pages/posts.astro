@@ -36,22 +36,23 @@ function getWordStr(str:String) {
     <Separator />
 
     <div class="grid grid-cols-1 gap-3">
-      {posts.map(p => 
-        <Card>
-          <CardHeader>
+      {posts.map(p => (
+        <a href={"posts/"+p.slug}>
+          <Card className="grid grid-cols-3 p-3 items-center hover:scale-[101%] hover:shadow-lg transition-all">
+            <CardHeader>
 
-            <CardTitle> <a href={"posts/"+p.slug}><u>{p.data.title}</u></a></CardTitle>
-            <CardDescription><i>{p.data.description}</i> <br> Author: {p.data.author} <br> Post date: {p.data.postDate} </CardDescription>
-           
-            
+              <CardTitle> <u>{p.data.title}</u></CardTitle>
+              <CardDescription className="text-md"><i class="font-bold">{p.data.description}</i> <br/> Author: {p.data.author} <br/> Post date: {p.data.postDate} </CardDescription>
+
            </CardHeader>
-          <CardContent>
-            <i>{getWordStr(p.body)}</i>
-            ...
-            </CardContent>
-        </Card>
-      )}
-    </div>
+
+            <div class="col-span-2 text-lg">
+              <i>{getWordStr(p.body)}</i>
+              ...
+            </div>
+          </Card>
+                  </a>
+      ))}
 
   </div>
 
