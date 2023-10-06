@@ -1,6 +1,6 @@
 ---
-title: "Doom Emacs"
-description: "the glories of doom emacs"
+title: "Doom Emacs (Sample Post))"
+description: "the glories of doom emacs (but really a test post)"
 postDate: "9/28/23"
 author: "Siddharth Gupta"
 
