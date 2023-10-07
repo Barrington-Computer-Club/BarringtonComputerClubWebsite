@@ -32,6 +32,7 @@ export default function Header(props: {currentHref: string}) {
         <NavigationLink title="Community Blog Posts" href="/posts"  currentHref={props.currentHref}/>
         <NavigationLink title="Archived Presentations" href="/presentations" currentHref={props.currentHref} />
         <NavigationLink title="CS Project Gallery" href="/projects" currentHref={props.currentHref} />
+        <NavigationLink title="Sign Up!" href="/signup" currentHref={props.currentHref} />
 
 
       </NavigationMenuList>
