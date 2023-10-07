@@ -19,7 +19,7 @@ const post = (await getCollection("posts")).sort((a, b) => new Date(b.data.postD
 
 <MainPage title="Barrington Computer Club">
     <div class="flex flex-col items-center justify-center h-screen w-6/12 mx-auto text-center">
-      <a transition:name='author' href={"posts/" + post.slug}><Badge variant="outline" className="mb-4 font-heading">New Blog Post!</Badge></a>
+      <a transition:name={post.slug + post.data.author} href={"posts/" + post.slug}><Badge variant="outline" className="mb-4 font-heading">New Blog Post!</Badge></a>
       <h1 class="mb-8 text-primary">The Computer Club of Barrington High School</h1>
       <p class="text-xl w-7/12 text-center mb-3">Building life-long computer science interests in the students of Barrington High School</p>
       <div class="flex flex-row gap-2">

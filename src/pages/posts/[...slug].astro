@@ -21,7 +21,7 @@ const {Content} = await entry.render()
   <div id="post" class="mt-32 w-6/12 mx-auto p-10 ">
     <h2 transition:name={entry.data.title} class="mb-4">{entry.data.title}</h2>
     <p class="mb-4">{entry.data.description}</p>
-    <Badge transition:name='author' className="py-1 mb-2" variant="secondary">Author: {entry.data.author}</Badge>
+    <Badge transition:name={entry.slug + entry.data.author} className="py-1 mb-2" variant="secondary">Author: {entry.data.author}</Badge>
     <Badge className="py-1 mb-2 ml-2" variant="outline">Date: {entry.data.postDate}</Badge>
     <div transition:name={"post" + entry.slug} class="flex flex-col gap-5 p-10 shadow-sm border-[1px] rounded-lg text-lg">
       <Content />
