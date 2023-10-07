@@ -1,6 +1,13 @@
 ---
 import Header from "../components/header";
+
+interface Props {
+  title: string,
+  transitions?: boolean,
+  children: any
+}
 const {title, transitions} = Astro.props
+
 import "cal-sans"
 import '@fontsource/montserrat'
 import "@/styles/globals.css";

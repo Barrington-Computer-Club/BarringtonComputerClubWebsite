@@ -11,6 +11,9 @@ export const getStaticPaths = (async () => {
   }))
 }) satisfies GetStaticPaths;
 
+interface Props {
+  entry: Awaited<ReturnType<typeof getCollection>>[0] // same type as entry above
+}
 const {entry} = Astro.props
 const {Content} = await entry.render()
 ---
