@@ -1,6 +1,6 @@
 ---
 import Header from "../components/header";
-const {title} = Astro.props
+const {title, transitions} = Astro.props
 import "cal-sans"
 import '@fontsource/montserrat'
 import "@/styles/globals.css";
@@ -17,7 +17,7 @@ const page = Astro.url.pathname.at(-1) === "/" ? Astro.url.pathname.slice(0, -1)
     <link rel="icon" type="image/png" href="/favicon.svg" />
 
     <title>{title}</title>
-    <ViewTransitions />
+    {transitions !== false && <ViewTransitions />}
 
   </head>
   <body>
