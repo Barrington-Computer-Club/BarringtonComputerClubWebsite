@@ -90,7 +90,7 @@ function getWordStr(str:String) {
     <p>(View all blog posts <a href="/posts"><u>here.</u></a>)</p>
   </div>
     <div class="flex md:flex-row flex-col gap-2 mt-6 md:w-8/12  hover:scale-[101%] hover:shadow-lg transition-all bg-primary-foreground">
-      <a transition:name={"post" + post.slug} href={"posts/"+post.slug}>
+      <a href={"posts/"+post.slug}>
       <Card className="bg-primary-foreground">
         <CardHeader>
           <CardTitle>{post.data.title}</CardTitle>
