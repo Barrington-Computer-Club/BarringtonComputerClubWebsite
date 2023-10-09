@@ -17,74 +17,66 @@ import { getCollection, getEntry } from "astro:content"
 const post = (await getCollection("posts")).sort((a, b) => new Date(b.data.postDate ?? 0).getTime() - new Date(a.data.postDate ?? 0).getTime())[0]
 ---
 
-<<<<<<< HEAD
 <MainPage title="Barrington Computer Club"}>
-    <div class="flex flex-col items-center justify-center h-screen container mx-auto text-center">
-      <a transition:name='author' href={"posts/" + post.slug}><Badge variant="outline" className="mb-4 font-heading">New Blog Post!</Badge></a>
-      <h1 class="mb-2 md:mb-8 md:w-[800px] text-primary">The Computer Club of Barrington High School</h1>
-      <p class="md:text-xl md:w-[700px] text-center mb-3">Building life-long computer science interests in the students of Barrington High School</p>
-=======
-<MainPage title="Barrington Computer Club">
-    <div class="flex flex-col items-center justify-center h-screen w-6/12 mx-auto text-center">
-      <a transition:name={post.slug + post.data.author} href={"posts/" + post.slug}><Badge variant="outline" className="mb-4 font-heading">New Blog Post!</Badge></a>
-      <h1 class="mb-8 text-primary">The Computer Club of Barrington High School</h1>
-      <p class="text-xl w-7/12 text-center mb-3">Building life-long computer science interests in the students of Barrington High School</p>
->>>>>>> master
-      <div class="flex flex-row gap-2">
-        <a rel="prefetch" href='/events'><Button variant="outline">Events</Button></a>
-        <a rel="prefetch" href="/signup"><Button >Sign Up!</Button></a>
-        
-      </div>
-    </div>
-
-    <div class="-mt-20 flex flex-col items-center container">
-      <h2>About Computer Club</h2>
-
-      <div class="flex md:flex-row flex-col gap-2 mt-4 md:w-8/12">
-        <Card>
-          <CardHeader>
-            <CardTitle>Background</CardTitle>
-            <!-- <CardDescription>Card Description</CardDescription> -->
-          </CardHeader>
-          <CardContent>
-            <p>The BHS Computer Club aims to help students from Barrington High School obtain a deeper understanding of topics in computer science. Meetings typically take the form of a short lecture followed by a hands-on activity. </p>
-          </CardContent>
-          <!-- <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter> -->
-        </Card>
-
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Competitions</CardTitle>
-            <!-- <CardDescription>Card Description</CardDescription> -->
-          </CardHeader>
-          <CardContent>
-            <p>Our club competes in two competitions - the American Computer Science League and the United States Coding Olympiad. Club meetings often center around topics covered in these competitions.</p>
-          </CardContent>
-          <!-- <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter> -->
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Presentations</CardTitle>
-            <!-- <CardDescription>Card Description</CardDescription> -->
-          </CardHeader>
-          <CardContent>
-            <p>Presentations are often given by senior members of the Computer Club. These presentations have a variety of topics, ranging from things like Generative AI to things like Vim and Functional Programming.</p>
-          </CardContent>
-          <!-- <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter> -->
-        </Card>
-      </div>
-
+  <div class="flex flex-col items-center justify-center h-screen container mx-auto text-center">
+    <a transition:name='author' href={"posts/" + post.slug}><Badge variant="outline" className="mb-4 font-heading">New Blog Post!</Badge></a>
+    <h1 class="mb-2 md:mb-8 md:w-[800px] text-primary">The Computer Club of Barrington High School</h1>
+    <p class="md:text-xl md:w-[700px] text-center mb-3">Building life-long computer science interests in the students of Barrington High School</p>
+    <div class="flex flex-row gap-2">
+      <a rel="prefetch" href='/events'><Button variant="outline">Events</Button></a>
+      <a rel="prefetch" href="/signup"><Button >Sign Up!</Button></a>
 
     </div>
-<br>
+  </div>
+
+  <div class="-mt-20 flex flex-col items-center container">
+    <h2>About Computer Club</h2>
+
+    <div class="flex md:flex-row flex-col gap-2 mt-4 md:w-8/12">
+      <Card>
+        <CardHeader>
+          <CardTitle>Background</CardTitle>
+          <!-- <CardDescription>Card Description</CardDescription> -->
+        </CardHeader>
+        <CardContent>
+          <p>The BHS Computer Club aims to help students from Barrington High School obtain a deeper understanding of topics in computer science. Meetings typically take the form of a short lecture followed by a hands-on activity. </p>
+        </CardContent>
+        <!-- <CardFooter>
+<p>Card Footer</p>
+</CardFooter> -->
+      </Card>
+
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Competitions</CardTitle>
+          <!-- <CardDescription>Card Description</CardDescription> -->
+        </CardHeader>
+        <CardContent>
+          <p>Our club competes in two competitions - the American Computer Science League and the United States Coding Olympiad. Club meetings often center around topics covered in these competitions.</p>
+        </CardContent>
+        <!-- <CardFooter>
+<p>Card Footer</p>
+</CardFooter> -->
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Presentations</CardTitle>
+          <!-- <CardDescription>Card Description</CardDescription> -->
+        </CardHeader>
+        <CardContent>
+          <p>Presentations are often given by senior members of the Computer Club. These presentations have a variety of topics, ranging from things like Generative AI to things like Vim and Functional Programming.</p>
+        </CardContent>
+        <!-- <CardFooter>
+<p>Card Footer</p>
+</CardFooter> -->
+      </Card>
+    </div>
+
+
+  </div>
+  <br>
 
 </MainPage>
 
