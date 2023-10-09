@@ -17,11 +17,19 @@ import { getCollection, getEntry } from "astro:content"
 const post = (await getCollection("posts")).sort((a, b) => new Date(b.data.postDate ?? 0).getTime() - new Date(a.data.postDate ?? 0).getTime())[0]
 ---
 
+<<<<<<< HEAD
 <MainPage title="Barrington Computer Club"}>
     <div class="flex flex-col items-center justify-center h-screen container mx-auto text-center">
       <a transition:name='author' href={"posts/" + post.slug}><Badge variant="outline" className="mb-4 font-heading">New Blog Post!</Badge></a>
       <h1 class="mb-2 md:mb-8 md:w-[800px] text-primary">The Computer Club of Barrington High School</h1>
       <p class="md:text-xl md:w-[700px] text-center mb-3">Building life-long computer science interests in the students of Barrington High School</p>
+=======
+<MainPage title="Barrington Computer Club">
+    <div class="flex flex-col items-center justify-center h-screen w-6/12 mx-auto text-center">
+      <a transition:name={post.slug + post.data.author} href={"posts/" + post.slug}><Badge variant="outline" className="mb-4 font-heading">New Blog Post!</Badge></a>
+      <h1 class="mb-8 text-primary">The Computer Club of Barrington High School</h1>
+      <p class="text-xl w-7/12 text-center mb-3">Building life-long computer science interests in the students of Barrington High School</p>
+>>>>>>> master
       <div class="flex flex-row gap-2">
         <a rel="prefetch" href='/events'><Button variant="outline">Events</Button></a>
         <a rel="prefetch" href="/signup"><Button >Sign Up!</Button></a>
