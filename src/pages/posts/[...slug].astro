@@ -18,7 +18,7 @@ const {entry} = Astro.props
 const {Content} = await entry.render()
 ---
 <MainPage title={entry.data.title}>
-  <div id="post" class="mt-32 container md:w-6/12 mx-auto p-10 ">
+  <div id="post" class="mt-20 md:mt-32 container md:w-6/12 mx-auto p-10 ">
     <h2 transition:name={entry.data.title} class="mb-4">{entry.data.title}</h2>
     <p class="mb-4">{entry.data.description}</p>
     <Badge transition:name={entry.slug + entry.data.author} className="py-1 mb-2" variant="secondary">Author: {entry.data.author}</Badge>
