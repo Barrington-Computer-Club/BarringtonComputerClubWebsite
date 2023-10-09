@@ -25,16 +25,20 @@ const presentations = allPresentations.slice()
 
 <MainPage title="Archived Presentations">
 
+<<<<<<< HEAD
   <div class="h-screen mt-20 md:mt-44 md:px-20 container md:w-6/12 mx-auto flex flex-col gap-4">
+=======
+  <div class="h-screen mt-44 md:px-20 container md:w-6/12 mx-auto flex flex-col gap-4">
+>>>>>>> a3aef189a78ca2100d081cc8f5a561f89c1ef70d
     <h2 class="">Archived Presentations</h2>
 
     <p class="text-lg">These are presentations on computer science and software engineering. Categories for past and future presentations include frontend, backend, full-stack, systems design, data structures, and algorithms. Materials used for the presentations are below.</p>
 
     <Separator />
 
-    <div class="grid grid-cols-3 gap-3">
+    <div class="grid md:grid-cols-3 gap-3">
       {presentations.map(p => 
-        <Card>
+        <Card className="bg-primary-foreground">
           <CardHeader>
             {p.data.image && <img width="375" height="375" src={p.data.image} alt={p.data.alt}/>}
             <CardTitle>{p.data.title}</CardTitle>

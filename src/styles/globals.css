@@ -77,20 +77,20 @@
     @apply font-heading text-primary
   }
   h1 {
-    @apply text-7xl
+    @apply text-4xl md:text-7xl
   }
   h2 {
-    @apply text-5xl
+    @apply text-3xl md:text-5xl
   }
   h3 {
-    @apply text-3xl
+    @apply md:text-3xl text-xl
   }
   h4 {
     @apply text-xl
   }
 
   p {
-    @apply text-primary
+    @apply text-primary text-sm md:text-xl
   }
 }
 
