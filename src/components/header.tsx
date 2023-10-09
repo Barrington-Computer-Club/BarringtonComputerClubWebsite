@@ -59,7 +59,7 @@ export default function Header(props: {currentHref: string}) {
 
   
   </nav>
-    <nav className="fixed z-50 top-0 right-0 left-0 gap-2 px-20 h-20 items-center justify-center flex">
+    <nav className="fixed z-50 top-0 right-0 left-0 gap-2 px-20 h-20 items-center justify-center flex md:hidden">
       {!mobileOpen && <Menu className="bg-white w-10 h-10 p-2 rounded-full shadow-md border" onClick={() => setMobileOpen(true)} />}
     </nav>
     {mobileOpen && <div className="fixed z-50 top-0 right-0 left-0 animate-in slide-in-from-top-full px-5 py-5 bg-primary-foreground shadow-lg rounded-bl-lg rounded-br-lg">
