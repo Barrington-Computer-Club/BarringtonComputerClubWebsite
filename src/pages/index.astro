@@ -15,11 +15,15 @@ import MainPage from "../layouts/MainPage.astro"
 import { getCollection, getEntry } from "astro:content"
 
 const post = (await getCollection("posts")).sort((a, b) => new Date(b.data.postDate ?? 0).getTime() - new Date(a.data.postDate ?? 0).getTime())[0]
+
+function getWordStr(str:String) {
+    return str.split(/\s+/).slice(0, 50).join(" ");
+}
 ---
 
 <MainPage title="Barrington Computer Club"}>
   <div class="flex flex-col items-center justify-center h-screen container mx-auto text-center">
-    <a transition:name='author' href={"posts/" + post.slug}><Badge variant="outline" className="mb-4 font-heading">New Blog Post!</Badge></a>
+    <a transition:name='author' href="https://www.instagram.com/bhscomputerclub/?igshid=MzRlODBiNWFlZA%3D%3D"><Badge variant="outline" className="mb-4 font-heading">Follow along on Instagram!</Badge></a>
     <h1 class="mb-2 md:mb-8 md:w-[800px] text-primary">The Computer Club of Barrington High School</h1>
     <p class="md:text-xl md:w-[700px] text-center mb-3">Building life-long computer science interests in the students of Barrington High School</p>
     <div class="flex flex-row gap-2">
@@ -31,15 +35,15 @@ const post = (await getCollection("posts")).sort((a, b) => new Date(b.data.postD
 
   <div class="-mt-20 flex flex-col items-center container">
     <h2>About Computer Club</h2>
-
-    <div class="flex md:flex-row flex-col gap-2 mt-4 md:w-8/12">
+    <h3>↓</h3>
+    <div class="flex md:flex-row flex-col gap-2 mt-4 md:w-10/12">
       <Card>
         <CardHeader>
           <CardTitle>Background</CardTitle>
           <!-- <CardDescription>Card Description</CardDescription> -->
         </CardHeader>
         <CardContent>
-          <p>The BHS Computer Club aims to help students from Barrington High School obtain a deeper understanding of topics in computer science. Meetings typically take the form of a short lecture followed by a hands-on activity. </p>
+          <p>The Computer Club aims to help BHS students obtain a deeper understanding of topics in computer science. Meetings are typically short lectures followed by a hands-on activities. </p>
         </CardContent>
         <!-- <CardFooter>
 <p>Card Footer</p>
@@ -53,7 +57,7 @@ const post = (await getCollection("posts")).sort((a, b) => new Date(b.data.postD
           <!-- <CardDescription>Card Description</CardDescription> -->
         </CardHeader>
         <CardContent>
-          <p>Our club competes in two competitions - the American Computer Science League and the United States Coding Olympiad. Club meetings often center around topics covered in these competitions.</p>
+          <p>Our club competes in two competitions - the <a href="https://www.acsl.org/"><u>American Computer Science League</u></a> and the <a href="http://www.usaco.org//"><u>USACO</u></a>. Club meetings often center around topics covered in these competitions.</p>
         </CardContent>
         <!-- <CardFooter>
 <p>Card Footer</p>
@@ -66,7 +70,7 @@ const post = (await getCollection("posts")).sort((a, b) => new Date(b.data.postD
           <!-- <CardDescription>Card Description</CardDescription> -->
         </CardHeader>
         <CardContent>
-          <p>Presentations are often given by senior members of the Computer Club. These presentations have a variety of topics, ranging from things like Generative AI to things like Vim and Functional Programming.</p>
+          <p>Presentations are often given by senior members. Presentation topics include generative AI, GitHub basics, and potentially even functional programming.</p>
         </CardContent>
         <!-- <CardFooter>
 <p>Card Footer</p>
@@ -76,7 +80,41 @@ const post = (await getCollection("posts")).sort((a, b) => new Date(b.data.postD
 
 
   </div>
+
+
+
+  <div class="mt-20 flex flex-col items-center container">
+    <h2>Latest Blog Post</h2>
+    
+    <div class="mt-4">
+    <p>(View all blog posts <a href="/posts"><u>here.</u></a>)</p>
+  </div>
+    <div class="flex md:flex-row flex-col gap-2 mt-6 md:w-8/12  hover:scale-[101%] hover:shadow-lg transition-all bg-primary-foreground">
+      <a href={"posts/"+post.slug}>
+      <Card>
+        <CardHeader>
+          <CardTitle>{post.data.title}</CardTitle>
+          <!-- <CardDescription>Card Description</CardDescription> -->
+        </CardHeader>
+        <CardContent>
+          <p><i>{getWordStr(post.body)}</i>...</p>
+        </CardContent>
+        <!-- <CardFooter>
+<p>Card Footer</p>
+</CardFooter> -->
+      </Card>
+    </a>
+        <!-- <CardFooter>
+<p>Card Footer</p>
+</CardFooter> -->
+
+    </div>
+
+
+  </div>
   <br>
+
+
 
 </MainPage>
 

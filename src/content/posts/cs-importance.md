@@ -26,3 +26,4 @@ Computer science is a creative field. It empowers individuals to build interacti
 
 In a world driven by technology and innovation, computer science is a fundamental skill that empowers individuals to thrive in the digital age. It opens doors to exciting career opportunities, enhances problem-solving abilities, and enables us to shape the future. Thus, computer science must be taught as a core subject in schools. Having a computer science background is becoming as important as knowing basic math, and we must promote the teaching of it. But, while we wait, you shouldn't have to. Dive into the world of computer science and explore the endless opportunities it offers with the many resources available on the Internet! 
 
+(ChatGPT is really good these days, huh?)
