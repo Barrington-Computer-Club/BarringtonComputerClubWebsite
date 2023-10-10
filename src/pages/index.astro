@@ -1,6 +1,8 @@
 ---
 import {Button} from "@/components/ui/button"
 import {Badge} from "@/components/ui/badge"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
 
 import {
   Card,
@@ -19,6 +21,7 @@ const post = (await getCollection("posts")).sort((a, b) => new Date(b.data.postD
 function getWordStr(str:String) {
     return str.split(/\s+/).slice(0, 50).join(" ");
 }
+const fullstr = getWordStr(post.body) + "..."
 ---
 
 <MainPage title="Barrington Computer Club"}>
@@ -97,7 +100,7 @@ function getWordStr(str:String) {
           <!-- <CardDescription>Card Description</CardDescription> -->
         </CardHeader>
         <CardContent>
-          <p><i>{getWordStr(post.body)}</i>...</p>
+          <i><div set:html={md.render(fullstr)}></div></Card>
         </CardContent>
         <!-- <CardFooter>
 <p>Card Footer</p>

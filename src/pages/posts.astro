@@ -3,6 +3,8 @@ import MainPage from "../layouts/MainPage.astro";
 import {Button} from "@/components/ui/button"
 import {Badge} from "@/components/ui/badge"
 import {Separator} from "@/components/ui/separator"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
 
 import {
   Card,
@@ -23,6 +25,8 @@ function getWordStr(str:String) {
 }
 
 // const posts = allPosts.slice()
+
+
   
 ---
 
@@ -48,8 +52,7 @@ function getWordStr(str:String) {
 
             <CardContent className="col-span-2">
             <div class="text-lg">
-              <i>{getWordStr(p.body)}</i>
-              ...
+              <i><div set:html={md.render(getWordStr(p.body)+"...")}></div></i>
             </div>
             </CardContent>
           </Card>
