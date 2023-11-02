@@ -24,7 +24,7 @@ export default function Header(props: {currentHref: string}) {
   console.log(props.currentHref)
   const [mobileOpen, setMobileOpen] = useState(false)
   return <>
-    <nav className="absolute top-0 right-0 left-0 flex-row gap-2 px-20 h-20 items-center hidden md:flex">
+    <nav className="fixed bg-white top-0 right-0 left-0 flex-row gap-2 px-20 h-20 items-center hidden md:flex">
 
     <a rel="prefetch" href="/"><h3>Barrington Computer Club &nbsp;</h3></a>
 
@@ -34,8 +34,6 @@ export default function Header(props: {currentHref: string}) {
 
         <NavigationLink title="Upcoming Events" href="/events" currentHref={props.currentHref} />
         <NavigationLink title="Community Blog Posts" href="/posts"  currentHref={props.currentHref}/>
-        <NavigationLink title="Archived Presentations" href="/presentations" currentHref={props.currentHref} />
-        <NavigationLink title="CS Project Gallery" href="/projects" currentHref={props.currentHref} />
         <NavigationLink title="About" href="/about" currentHref={props.currentHref} />
 
 

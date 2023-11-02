@@ -64,6 +64,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/remarkable": "^2.0.4"
+    "@types/remarkable": "^2.0.4",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.4"
   }
 }

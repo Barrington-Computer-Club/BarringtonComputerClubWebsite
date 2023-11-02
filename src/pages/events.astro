@@ -2,8 +2,10 @@
 import { Separator } from "@/components/ui/separator";
 import MainPage from "../layouts/MainPage.astro"
 import {getCollection} from "astro:content"
+import UpcomingEvent from "@/components/upcomingEvent"
 
-const presentations = (await getCollection('presentations')).sort((a, b) => a.data.presentationDate - b.data.presentationDate).filter(p => p.data.presentationDate > new Date())
+const presentations = (await getCollection('presentations')).sort((a, b) => b.data.presentationDate?.getTime() ?? 0 - a.data.presentationDate?.getTime() ?? 0).filter(p => p.data.presentationDate > new Date()) // this won't work with static generation. 
+export type UpcomingPresentation = (typeof presentations)[0]
 
 ---
 <!--TODO: un-mess up dates of events -->
@@ -15,15 +17,6 @@ const presentations = (await getCollection('presentations')).sort((a, b) => a.da
     <Separator/>
 
 
-    {presentations.map(p => 
-      <div class="bg-primary-foreground p-5 shadow-sm border-[1px] rounded-lg flex flex-row items-center gap-7 md:hover:scale-[101%] transition-all group">
-        <img src={p.data.image} class="md:w-32 w-16 inset-0"/>
-        <div class="flex flex-col">
-          <h3>{p.data.title}</h3>
-          <p class="md:text-2xl mb-1">{p.data.presentationDate?.toDateString()}</p>
-          <p class="md:text-lg text-xs block"><i>{p.data.description}</i></p>
-        </div>
-      </div>
-    )}
+    {presentations.map(p => <UpcomingEvent client:load presentation={p.data} slug={p.slug} />)}
   </div>
 </MainPage>
