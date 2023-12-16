@@ -86,35 +86,6 @@ const fullstr = getWordStr(post.body) + "..."
 
 
 
-  <div class="mt-20 flex flex-col items-center container">
-    <h2>Latest Blog Post</h2>
-    
-    <div class="mt-4">
-    <p>(View all blog posts <a href="/posts"><u>here.</u></a>)</p>
-  </div>
-    <div class="flex md:flex-row flex-col gap-2 mt-6 md:w-8/12  hover:scale-[101%] hover:shadow-lg transition-all bg-primary-foreground">
-      <a href={"posts/"+post.slug}>
-      <Card className="bg-primary-foreground">
-        <CardHeader>
-          <CardTitle>{post.data.title}</CardTitle>
-          <!-- <CardDescription>Card Description</CardDescription> -->
-        </CardHeader>
-        <CardContent>
-          <i><div set:html={md.render(fullstr)}></div></Card>
-        </CardContent>
-        <!-- <CardFooter>
-<p>Card Footer</p>
-</CardFooter> -->
-      </Card>
-    </a>
-        <!-- <CardFooter>
-<p>Card Footer</p>
-</CardFooter> -->
-
-    </div>
-
-
-  </div>
   <br>
 
 
