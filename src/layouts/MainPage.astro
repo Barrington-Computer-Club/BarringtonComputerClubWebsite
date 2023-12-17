@@ -17,7 +17,7 @@ import { Analytics } from "@vercel/analytics/react"
 const page = Astro.url.pathname.at(-1) === "/" ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname
 ---
 
-<html lang="en">
+<html lang="en" transition:animate="none">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
