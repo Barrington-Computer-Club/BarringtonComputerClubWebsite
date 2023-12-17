@@ -7,7 +7,7 @@ image: "/advisory.png"
 
 For today's advisory lesson, Computer Club is offering a few resources to have a bit of fun -- at any skill level!
 
-# New to programming
+# You are new to programming
 
 These resources are best for those that have no experience in CS or programming and want to see what it's about. Many of these resources do not require writing code by hand, and allow you to use "blocks" to create programs.
 
@@ -17,7 +17,7 @@ These resources are best for those that have no experience in CS or programming 
 - [Learn python!](https://www.youtube.com/watch?v=7wnove7K-ZQ&list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg)
 - Create a star wars game through block code [here](https://studio.code.org/s/starwarsblocks?viewAs=Instructor).
 
-# Written Some Code
+# You have written Some Code
 
 - Create custom music with sound files in python [here](https://earsketch.gatech.edu/earsketch2/?curriculum=/en/v1/ch_HourOfCode:WhatIs&language=python)
 - Follow along in [this tutorial](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/keras/classification.ipynb) (part of [this](https://www.tensorflow.org/tutorials/keras/classification)) to create a machine learning model able to determine the name of fashion items from an image. You won't need to write any code! just press play on the code boxes and read through the comments to create and test the model.
