@@ -38,9 +38,16 @@ export default function Header(props: {currentHref: string}) {
 
       <NavigationMenuList>
 
+<<<<<<< HEAD
           {
             links.map(NavigationLink)
           }
+=======
+        <NavigationLink title="Upcoming Events" href="/events" currentHref={props.currentHref} />
+        <NavigationLink title="Community Blog Posts" href="/posts"  currentHref={props.currentHref}/>
+        <NavigationLink title="About" href="/about" currentHref={props.currentHref} />
+
+>>>>>>> 50e279442f757d85063bbd4b7a49c01bb14459f3
 
       </NavigationMenuList>
 

@@ -1,0 +1,32 @@
+---
+import MainPage from "../layouts/MainPage.astro";
+import {Button} from "@/components/ui/button"
+import {Badge} from "@/components/ui/badge"
+import {Separator} from "@/components/ui/separator"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
+
+
+
+import * as myPost from 'src/pages/posts/about.md';
+
+  
+---
+
+<MainPage title="About">
+
+  <div class="h-screen mt-20 md:mt-44 md:px-20 container md:w-6/12 mx-auto flex flex-col gap-4">
+    <h2 class="">About</h2>
+
+    <p class="text-lg">The computer club of Barrington High School is an organization that aims to promote computer science and technology education. Our club is open to all students who are interested in learning more about computer science and related technologies. We offer a variety of activities and events throughout the year, including coding competitions, workshops, and directed lessons. Our goal is to provide a supportive and inclusive community for students to explore their interests in STEM. </p>
+
+    <Separator />
+    <p class="text-lg">One of our first activities of the year was to learn how to use Git and GitHub. Below you will see the first commits of many of our members:</p>
+<br>
+    <p class="text-lg"><i>{myPost.rawContent}</i></p>
+    <Separator />
+
+
+</MainPage>
+
+
