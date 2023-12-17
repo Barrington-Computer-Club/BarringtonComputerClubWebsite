@@ -18,6 +18,7 @@ import {
 import {getCollection, getEntry} from "astro:content"
 
 const posts = await getCollection("posts")
+const postsSorted = posts.slice().sort((a, b) => (new Date(b.data.postDate ?? 0).getTime() - new Date(a.data.postDate ?? 0).getTime()))
 
 // const posts = allPosts.slice()
 ---
@@ -33,7 +34,7 @@ const posts = await getCollection("posts")
     <Separator />
 
     <div class="grid grid-cols-1 gap-3">
-      {posts.map(p => (
+      {postsSorted.map(p => (
         <a href={"posts/"+p.slug}>
           <Card className="bg-primary-foreground px-8 py-2 hover:scale-[101%] transition-all hover:shadow-lg">
 
@@ -43,7 +44,7 @@ const posts = await getCollection("posts")
             </div>
 
             <Badge variant={"outline"} className="py-1 mb-2 bg-gray-200 text-black">{p.data.author}</Badge>
-            <Badge className="py-1 mb-2 ml-2" variant="outline">Date: {p.data.postDate}</Badge>
+            {p.data.postDate && <Badge className="py-1 mb-2 ml-2" variant="outline">Date: {p.data.postDate}</Badge>}
           </Card>
         </a>
       ))}
