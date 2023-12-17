@@ -35,14 +35,15 @@ const posts = await getCollection("posts")
     <div class="grid grid-cols-1 gap-3">
       {posts.map(p => (
         <a href={"posts/"+p.slug}>
-          <Card className="md:grid grid-cols-3 p-3 items-center hover:scale-[101%] hover:shadow-lg transition-all bg-primary-foreground">
-            <CardHeader className="col-span-2">
-              <CardTitle className="text-3xl font-sans"> {p.data.title}</CardTitle>
-            </CardHeader>
+          <Card className="bg-primary-foreground px-8 py-2 hover:scale-[101%] transition-all hover:shadow-lg">
 
-            <CardContent className="col-span-1">
-              <CardDescription className="text-md md:text-sm"><i class="font-bold">{p.data.description}</i> <br/> <b><u>Author</u>: </b> {p.data.author} <br/> <b><u>Post date</u>: </b> {p.data.postDate} </CardDescription>
-            </CardContent>
+            <div class="mb-3 flex flex-col gap-3">
+              <CardTitle className="text-3xl font-sans"> {p.data.title}</CardTitle>
+              {p.data.description && <CardDescription className="md:text-sm !text-2xl mb-2">{p.data.description}</CardDescription>}
+            </div>
+
+            <Badge variant={"outline"} className="py-1 mb-2 bg-gray-200 text-black">{p.data.author}</Badge>
+            <Badge className="py-1 mb-2 ml-2" variant="outline">Date: {p.data.postDate}</Badge>
           </Card>
         </a>
       ))}
