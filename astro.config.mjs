@@ -2,10 +2,12 @@ import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
-import prefetch from "@astrojs/prefetch";
-
 // https://astro.build/config
 export default defineConfig({
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'viewport'
+  },
   // PORT 
   vite: {
     ssr: {
@@ -17,5 +19,5 @@ export default defineConfig({
   },
   integrations: [react(), tailwind({
     applyBaseStyles: false
-  }), prefetch()]
+  })]
 });

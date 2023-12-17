@@ -32,7 +32,7 @@ export default function Header(props: {currentHref: string}) {
   return <>
     <nav className="fixed bg-white z-50 top-0 right-0 left-0 flex-row gap-2 px-20 h-20 items-center hidden md:flex">
 
-    <a rel="prefetch" href="/"><h3>Barrington Computer Club &nbsp;</h3></a>
+    <a href="/"><h3>Barrington Computer Club &nbsp;</h3></a>
 
     <NavigationMenu>
 
@@ -52,7 +52,7 @@ export default function Header(props: {currentHref: string}) {
     <div className="ml-auto">
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger><a rel="prefetch" href="https://github.com/Feel-ix-343/BarringtonComputerClubWebsite"><img width="50" src="/icons8-github-128.png" alt="github" /></a></TooltipTrigger>
+          <TooltipTrigger><a href="https://github.com/Feel-ix-343/BarringtonComputerClubWebsite"><img width="50" src="/icons8-github-128.png" alt="github" /></a></TooltipTrigger>
           <TooltipContent>
             <p>View Source Code</p>
           </TooltipContent>
@@ -81,7 +81,7 @@ export default function Header(props: {currentHref: string}) {
 interface NavLinkProps {title: string, description?: string, href?: string, currentHref: string}
 
 function NavigationLink(props: NavLinkProps) {
-  return <a rel="prefetch" href={props.href} className={ "flex flex-col hover:bg-secondary transition-all px-3 py-1 rounded-lg" + (props.currentHref === props.href ? " bg-secondary" : "") }>
+  return <a href={props.href} className={ "flex flex-col hover:bg-secondary transition-all px-3 py-1 rounded-lg" + (props.currentHref === props.href ? " bg-secondary" : "") }>
     <h4 className="font-sans text-sm">{props.title}</h4>
     <p className="text-xs">{props.description}</p>
   </a>
