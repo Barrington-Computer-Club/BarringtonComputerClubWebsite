@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/prefetch": "^0.4.0",
-    "@astrojs/react": "^3.0.0",
-    "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/prefetch": "^0.4.1",
+    "@astrojs/react": "^3.0.7",
+    "@astrojs/tailwind": "^5.0.3",
     "@fontsource/montserrat": "^5.0.8",
     "@hookform/resolvers": "^3.3.1",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -46,7 +46,7 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@vercel/analytics": "^1.0.2",
-    "astro": "^3.0.7",
+    "astro": "^4.0.6",
     "cal-sans": "^1.0.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
