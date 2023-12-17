@@ -18,11 +18,6 @@ import {
 import {getCollection, getEntry} from "astro:content"
 
 const posts = await getCollection("posts")
-const today = new Date()
-
-function getWordStr(str:String) {
-    return str.split(/\s+/).slice(0, 30).join(" ");
-}
 
 // const posts = allPosts.slice()
 
@@ -43,17 +38,12 @@ function getWordStr(str:String) {
       {posts.map(p => (
         <a href={"posts/"+p.slug}>
           <Card transition:name={"post" + p.slug} className="md:grid grid-cols-3 p-3 items-center hover:scale-[101%] hover:shadow-lg transition-all bg-primary-foreground">
-            <CardHeader>
-
-              <CardTitle> {p.data.title}</CardTitle>
-              <CardDescription className="text-md md:text-sm"><i class="font-bold">{p.data.description}</i> <br/> <b><u>Author</u>: </b> {p.data.author} <br/> <b><u>Post date</u>: </b> {p.data.postDate} </CardDescription>
-
+            <CardHeader className="col-span-2">
+              <CardTitle className="text-3xl font-sans"> {p.data.title}</CardTitle>
            </CardHeader>
 
-            <CardContent className="col-span-2">
-            <div class="text-lg">
-              <i><div set:html={md.render(getWordStr(p.body)+"...")}></div></i>
-            </div>
+            <CardContent className="col-span-1">
+              <CardDescription className="text-md md:text-sm"><i class="font-bold">{p.data.description}</i> <br/> <b><u>Author</u>: </b> {p.data.author} <br/> <b><u>Post date</u>: </b> {p.data.postDate} </CardDescription>
             </CardContent>
           </Card>
         </a>
