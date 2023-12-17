@@ -26,7 +26,7 @@ const posts = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     tags: z.array(z.string()).optional(),
-    image: z.string().url().optional(),
+    image: z.string().optional(),
     alt: z.string().optional(),
     author: z.string().optional(),
     postDate: z.string().optional(),
