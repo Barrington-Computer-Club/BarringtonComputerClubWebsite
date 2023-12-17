@@ -38,7 +38,7 @@ const posts = await getCollection("posts")
           <Card className="bg-primary-foreground px-8 py-2 hover:scale-[101%] transition-all hover:shadow-lg">
 
             <div class="mb-3 flex flex-col gap-3">
-              <CardTitle className="text-3xl font-sans"> {p.data.title}</CardTitle>
+              <CardTitle className="text-3xl !font-sans"> {p.data.title}</CardTitle>
               {p.data.description && <CardDescription className="md:text-sm !text-2xl mb-2">{p.data.description}</CardDescription>}
             </div>
 
