@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
+        sans: ["Montserrat"],
         heading: ["Cal Sans", "sans-serif"],
       },
       colors: {
