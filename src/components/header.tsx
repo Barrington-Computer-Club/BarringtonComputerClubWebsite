@@ -23,6 +23,12 @@ import { useState } from "react"
 export default function Header(props: {currentHref: string}) {
   console.log(props.currentHref)
   const [mobileOpen, setMobileOpen] = useState(false)
+
+  const links: NavLinkProps[] = [
+    {title: "Upcoming Events", href: "/events", currentHref: props.currentHref},
+    {title: "Community Blog Posts", href: "/posts", currentHref: props.currentHref}
+  ]
+
   return <>
     <nav className="fixed bg-white z-50 top-0 right-0 left-0 flex-row gap-2 px-20 h-20 items-center hidden md:flex">
 
@@ -32,9 +38,9 @@ export default function Header(props: {currentHref: string}) {
 
       <NavigationMenuList>
 
-        <NavigationLink title="Upcoming Events" href="/events" currentHref={props.currentHref} />
-        <NavigationLink title="Community Blog Posts" href="/posts"  currentHref={props.currentHref}/>
-
+          {
+            links.map(NavigationLink)
+          }
 
       </NavigationMenuList>
 
@@ -64,16 +70,17 @@ export default function Header(props: {currentHref: string}) {
       <a href="/"><h2>Computer Club Home</h2></a>
       <X className="absolute top-2 right-2" onClick={() => setMobileOpen(false)} />
       <div className="mt-1 flex flex-col gap-2">
-        <NavigationLink title="Upcoming Events" href="/events" currentHref={props.currentHref} />
-        <NavigationLink title="Community Blog Posts" href="/posts"  currentHref={props.currentHref}/>
-        <NavigationLink title="Archived Presentations" href="/presentations" currentHref={props.currentHref} />
-        <NavigationLink title="CS Project Gallery" href="/projects" currentHref={props.currentHref} />
+          {
+            links.map(NavigationLink)
+          }
       </div>
     </div>}
   </>
 }
 
-function NavigationLink(props: {title: string, description?: string, href?: string, currentHref: string}) {
+interface NavLinkProps {title: string, description?: string, href?: string, currentHref: string}
+
+function NavigationLink(props: NavLinkProps) {
   return <a rel="prefetch" href={props.href} className={ "flex flex-col hover:bg-secondary transition-all px-3 py-1 rounded-lg" + (props.currentHref === props.href ? " bg-secondary" : "") }>
     <h4 className="font-sans text-sm">{props.title}</h4>
     <p className="text-xs">{props.description}</p>
