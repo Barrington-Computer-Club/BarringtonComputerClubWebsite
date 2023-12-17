@@ -40,7 +40,7 @@ const posts = await getCollection("posts")
           <Card transition:name={"post" + p.slug} className="md:grid grid-cols-3 p-3 items-center hover:scale-[101%] hover:shadow-lg transition-all bg-primary-foreground">
             <CardHeader className="col-span-2">
               <CardTitle className="text-3xl font-sans"> {p.data.title}</CardTitle>
-           </CardHeader>
+            </CardHeader>
 
             <CardContent className="col-span-1">
               <CardDescription className="text-md md:text-sm"><i class="font-bold">{p.data.description}</i> <br/> <b><u>Author</u>: </b> {p.data.author} <br/> <b><u>Post date</u>: </b> {p.data.postDate} </CardDescription>
@@ -49,6 +49,6 @@ const posts = await getCollection("posts")
         </a>
       ))}
 
-  </div>
+    </div>
 
 </MainPage>
