@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/card"
 
 import {getCollection, getEntry} from "astro:content"
+import { Image } from "astro:assets";
 
 const posts = await getCollection("posts")
 const postsSorted = posts.slice().sort((a, b) => (new Date(b.data.postDate ?? 0).getTime() - new Date(a.data.postDate ?? 0).getTime()))
@@ -36,8 +37,10 @@ const postsSorted = posts.slice().sort((a, b) => (new Date(b.data.postDate ?? 0)
     <div class="grid grid-cols-1 gap-3">
       {postsSorted.map(p => (
         <a href={"posts/"+p.slug}>
-          <Card className="bg-primary-foreground px-8 py-2 hover:scale-[101%] transition-all hover:shadow-lg">
+          <Card className="bg-primary-foreground px-4 py-4 hover:scale-[101%] transition-all hover:shadow-lg flex md:flex-row flex-col gap-7 items-center">
+          {p.data.image && <Image src={p.data.image} alt={"Blog Image"} width="200" height={200} class="rounded-lg" /> }
 
+            <div>
             <div class="mb-3 flex flex-col gap-3">
               <CardTitle className="text-2xl md:text-3xl md:font-sans"> {p.data.title}</CardTitle>
               {p.data.description && <CardDescription className="md:text-sm !text-2xl mb-2">{p.data.description}</CardDescription>}
@@ -45,6 +48,7 @@ const postsSorted = posts.slice().sort((a, b) => (new Date(b.data.postDate ?? 0)
 
             <Badge variant={"outline"} className="py-1 mb-2 bg-gray-200 text-black">{p.data.author}</Badge>
             {p.data.postDate && <Badge className="py-1 mb-2 ml-2" variant="outline">Date: {p.data.postDate}</Badge>}
+            </div>
           </Card>
         </a>
       ))}

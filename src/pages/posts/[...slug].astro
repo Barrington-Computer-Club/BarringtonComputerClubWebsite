@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import MainPage from "@/layouts/MainPage.astro";
 import type { GetStaticPaths } from "astro";
 import { getCollection } from 'astro:content';
+import { Image } from "astro:assets";
 
 export const getStaticPaths = (async () => {
   const blogEntires = await getCollection('posts')
@@ -19,6 +20,7 @@ const {Content} = await entry.render()
 ---
 <MainPage title={entry.data.title}>
   <div id="post" class="mt-20 md:mt-32 container md:w-6/12 mx-auto p-10 ">
+    {entry.data.image && <Image src={entry.data.image} alt={"Blog Image"} width="300" height={300} class="rounded-lg mb-10" /> }
     <h2 class="mb-4">{entry.data.title}</h2>
     <p class="mb-4">{entry.data.description}</p>
     <Badge className="py-1 mb-2" variant="secondary">Author: {entry.data.author}</Badge>
