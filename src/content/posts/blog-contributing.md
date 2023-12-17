@@ -1,6 +1,6 @@
 ---
 title: "Contributing To This Blog"
-description: "Using Git and GitHub Codespaces to contribute"
+description: "Using Git and GitHub Codespaces to contribute to this website"
 postDate: "10/10/23"
 author: "Siddharth Gupta"
 
