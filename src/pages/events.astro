@@ -17,6 +17,6 @@ export type UpcomingPresentation = (typeof presentations)[0]
     <Separator/>
 
 
-    {presentations.map(p => <UpcomingEvent client:load presentation={p.data} slug={p.slug} />)}
+    {presentations.length !== 0 ? presentations.map(p => <UpcomingEvent client:load presentation={p.data} slug={p.slug} />) : <>Scary null!</>}
   </div>
 </MainPage>
