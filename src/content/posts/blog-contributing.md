@@ -3,7 +3,7 @@ title: "Contributing To This Blog"
 description: "Using Git and GitHub Codespaces to contribute to this website"
 postDate: "10/10/23"
 author: "Siddharth Gupta"
-
+image: https://img.icons8.com/3d-fluency/188/github.png
 ---
 If you'd like to contribute to this blog, follow these steps. Anything in **bold** is a link that can be clicked on.
 

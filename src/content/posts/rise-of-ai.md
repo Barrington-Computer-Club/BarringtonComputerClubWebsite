@@ -2,6 +2,7 @@
 title: "The Rise of AI"
 postDate: "12/12/23"
 author: "Michelle Xian"
+image: "https://static.wixstatic.com/media/8f7481_9ac5b590782a4ad1b663c1ccdcc0a31d~mv2.png/v1/fill/w_528,h_302,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/8f7481_9ac5b590782a4ad1b663c1ccdcc0a31d~mv2.png"
 ---
 
 Everyone has heard of ChatGPT. The artificial intelligence (AI) chatbot rose to prominence when it was released in late 2022, and it has grew to become more well-known. The release of ChatGPT has kicked off the development of new and different AI platforms, and today, one can find various types of AI on the Internet. There are websites to create an image based on a few keywords and extensions that can write emails. AI has become a part of our everyday life. But what does that mean?

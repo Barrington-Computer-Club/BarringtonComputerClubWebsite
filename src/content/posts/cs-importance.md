@@ -2,6 +2,7 @@
 title: "The Importance of Computer Science"
 postDate: "10/6/23"
 author: "Michelle Xian"
+image: https://static.wixstatic.com/media/e979fa_fd058ded6430435fbae9a2b9c53a45df~mv2.png/v1/fill/w_438,h_292,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e979fa_fd058ded6430435fbae9a2b9c53a45df~mv2.png
 ---
 
 Computer science is one of today's most prominent fields. As technology develops, as we have seen recently with the rise of AI, possessing knowledge of computer science becomes increasingly important. In today's digital age, technology permeates nearly every aspect of our lives. From smartphones and social media to self-driving cars and smart homes, technology has become an integral part of our daily routines. Understanding computer science allows us to not only use these technologies effectively but also empowers us to innovate and create the technologies of the future. 
