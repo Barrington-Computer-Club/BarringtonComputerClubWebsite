@@ -21,7 +21,6 @@ import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
 export default function Header(props: {currentHref: string}) {
-  console.log(props.currentHref)
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const links: NavLinkProps[] = [

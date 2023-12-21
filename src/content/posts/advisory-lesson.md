@@ -11,7 +11,6 @@ Have fun!!!
 
 # What even is computer science, and why should I care?
 Computer science is the study of computers and computational systems. It is a broad field, and includes topics such as programming, algorithms, data structures, artificial intelligence, and more. Computer science is a very important field, and is becoming more and more important as technology becomes more and more prevalent in our lives. It is also a very fun field, and can be used to create all sorts of cool things, from games to apps to websites to robots to AI.
-
 In case you're still not convinced, here are some resources that explain why computer science is important and why you should care about it.
 - [Why Computer Science?](https://www.depauw.edu/academics/departments-programs/computer-science/why-study-computer-science/)
 - [What is Computer Science?](https://www.ics.hawaii.edu/why-study-computer-science/)
@@ -32,7 +31,7 @@ These resources are best for those that have no experience in CS or programming 
 
 - Create custom music with sound files in Python [here](https://earsketch.gatech.edu/earsketch2/?curriculum=/en/v1/ch_HourOfCode:WhatIs&language=python)
 - Try some of the the tricky coding problems over at [Project Euler](https://projecteuler.net/) or [cses.fi](https://cses.fi/problemset/). 
-- Learn about and make an account on [GitHub](github.com), a website for hosting code and collaborating on projects. Here are some resources: [Computer Club Resouce](https://docs.google.com/document/d/1bjwX22HFLTa3FUJjDWL_bdxRclsfvCc-STh0kacKaso/edit), [GitHub Learning Lab](https://lab.github.com/), [GitHub Guides](https://guides.github.com/), [GitHub Docs](https://docs.github.com/en), [GitHub YouTube Channel](https://www.youtube.com/githubguides).
+- Learn about and make an account on [GitHub](github.com), a website for hosting code and collaborating on projects. Here are some resources: [Computer Club Resouce](https://docs.google.com/document/d/1bjwX22HFLTa3FUJjDWL_bdxRclsfvCc-STh0kacKaso/edit), [GitHub Learning Lab](https://lab.github.com/), [GitHub Guides](https://guides.github.com/), [GitHub Docs](https://docs.github.com/en), [GitHub YouTube Channel](https://www.youtube.com/githubguides). You could even follow [this tutorial](blog-contributing) and publish a post on this website!
 - Learn about [Open Source Software](https://opensource.com/resources/what-open-source) and [Open Source Licenses](https://opensource.org/licenses).
 
 If any of these activities were appealing to you, or if you're interested in things like computer science, coding, competitive programming, game or app development, artificial intelligence, data science, or anything similar... [join computer club](/signup)! We love having new members.
