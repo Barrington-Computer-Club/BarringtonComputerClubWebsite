@@ -25,7 +25,7 @@ const {Content} = await entry.render()
     <p class="mb-4">{entry.data.description}</p>
     <Badge className="py-1 mb-2" variant="secondary">Author: {entry.data.author}</Badge>
     <Badge className="py-1 mb-2 ml-2" variant="outline">Date: {entry.data.postDate}</Badge>
-    <div class="bg-primary-foreground flex flex-col gap-5 md:p-10 p-4 shadow-sm border-[1px] rounded-lg text-lg">
+    <div class="bg-primary-foreground md:w-[800px] flex flex-col gap-5 md:p-10 p-4 shadow-sm border-[1px] rounded-lg text-lg">
       <article class="prose prose-stone">
         <Content />
       </article>
