@@ -31,7 +31,7 @@ export default function Header(props: {currentHref: string}) {
   return <>
     <nav className="fixed bg-white z-50 top-0 right-0 left-0 flex-row gap-2 px-20 h-20 items-center hidden md:flex">
 
-    <a href="/"><h3>Barrington Computer Club &nbsp;</h3></a>
+    <a href="/"><h3>The Computer Club &nbsp;</h3></a>
 
     <NavigationMenu>
 
