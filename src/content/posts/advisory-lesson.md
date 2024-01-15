@@ -1,6 +1,6 @@
 ---
 title: "Winter Break Advisory Activities"
-author: Felix and Sid
+author: Felix Zeller and Sid Gupta
 postDate: 12/16/23
 image: "/advisory.png"
 ---
@@ -11,6 +11,7 @@ Have fun!!!
 
 # What even is computer science, and why should I care?
 Computer science is the study of computers and computational systems. It is a broad field, and includes topics such as programming, algorithms, data structures, artificial intelligence, and more. Computer science is a very important field, and is becoming more and more important as technology becomes more and more prevalent in our lives. It is also a very fun field, and can be used to create all sorts of cool things, from games to apps to websites to robots to AI.
+
 In case you're still not convinced, here are some resources that explain why computer science is important and why you should care about it.
 - [Why Computer Science?](https://www.depauw.edu/academics/departments-programs/computer-science/why-study-computer-science/)
 - [What is Computer Science?](https://www.ics.hawaii.edu/why-study-computer-science/)
