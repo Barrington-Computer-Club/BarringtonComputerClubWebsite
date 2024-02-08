@@ -5,7 +5,7 @@ author: "Felix Zeller"
 image: https://www.dataquest.io/wp-content/uploads/2023/03/project-ideas.png
 ---
 
-Here are some project ideas for you and a partner to consider
+Here are some project ideas for you and a partner(s) to consider
 
 
 ## Beginners
