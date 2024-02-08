@@ -14,6 +14,7 @@ Learn a language while working on projects. Pick the most interesting of the fol
 * Jetbrains academy projects (students can get this free for one month https://lp.jetbrains.com/jba-students/); Pick a learning track from [here](https://academy.jetbrains.com/?_gl=1*1emkdlq*_ga*MTU3NTE0NDc3Mi4xNzA2ODQ1MjY2*_ga_9J976DJZ68*MTcwNzQyMjE4Mi4yLjEuMTcwNzQyMjI5Mi4wLjAuMA..&_ga=2.238049792.1095715852.1707422183-1575144772.1706845266)
 * https://www.dataquest.io/blog/python-projects-for-beginners/ Pick a project for you and your partners to do
 * Learn javascript and react for web development through project tutorials: https://react.dev/learn
+* Leetcode beginner topics
 
 ## Intermediate
 
