@@ -15,6 +15,7 @@ Learn a language while working on projects. Pick the most interesting of the fol
 * https://www.dataquest.io/blog/python-projects-for-beginners/ Pick a project for you and your partners to do
 * Learn javascript and react for web development through project tutorials: https://react.dev/learn
 * Leetcode beginner topics
+* Check out some ideas from [here](https://www.perplexity.ai/search/Beginner-Programming-Projects-2KIk69tNRSqpkfT9sfhBbw?s=u)
 
 ## Intermediate
 
