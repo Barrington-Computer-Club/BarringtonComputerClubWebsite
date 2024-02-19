@@ -24,7 +24,6 @@ export default function Header(props: {currentHref: string}) {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const links: NavLinkProps[] = [
-    {title: "Upcoming Events", href: "/events", currentHref: props.currentHref},
     {title: "Community Blog Posts", href: "/posts", currentHref: props.currentHref}
   ]
 
