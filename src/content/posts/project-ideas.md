@@ -1,6 +1,6 @@
 ---
 title: "Project Ideas"
-postDate: "2/8/24"
+postDate: "2/29/24"
 author: "Felix Zeller"
 image: https://www.dataquest.io/wp-content/uploads/2023/03/project-ideas.png
 ---
