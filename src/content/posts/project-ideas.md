@@ -6,7 +6,7 @@ image: https://www.dataquest.io/wp-content/uploads/2023/03/project-ideas.png
 ---
 
 
-Computer Club is a great time for collaboration, not just competition! I think it will be quite fun to collaboratively work on side projects during Computer Club time. In the near future, Computer Club will be hosting work and planning sessions for members to collaboratively develop CS side projects. 
+Computer Club is a great time for collaboration, not just competition! I think it will be quite fun to collaboratively work on side projects/open-source during Computer Club time. In the near future, Computer Club will be hosting work and planning sessions for members to collaboratively develop CS side projects. 
 
 ## Why work on collaborative CS side projects?
 
