@@ -5,10 +5,24 @@ author: "Felix Zeller"
 image: https://www.dataquest.io/wp-content/uploads/2023/03/project-ideas.png
 ---
 
-Here are some project ideas for you and a partner(s) to consider
+
+Computer Club is a great time for collaboration, not just competition! I think it will be quite fun to collaboratively work on side projects during Computer Club time. In the near future, Computer Club will be hosting work and planning sessions for members to collaboratively develop CS side projects. 
+
+## Why work on collaborative CS side projects?
+
+1. **Collaboration is fun!**
+2. **To develop a resume that appeals to CS internships, colleges, and jobs** ; Many people ask: "How do you make money from side-projects/open source?"; the answer is that open source/side-projects gives an incredible boost to your resume, helping you get high-paying jobs (if you desire). One of my Senior-Developer/Manager friends said that personal projects are a major indication of an applicant's ability to perform on the job -- and that most people applying for jobs do not have any meaningful projects! For many (myself included), the *resume boost* is a major motivation for side-projects/open source.
+3. Science Fair Awards!
+4. To learn programming languages (Python, Java, C++, ...)
+5. To learn technologies (web servers, databases, ...)
+6. To create products that solve your problems. Often, there are bugs or unimplemented features we want in software that we frequently use and the software may happen to be open source or support extensions; In this case, you can actually write the features for the software yourself (I do this all the time!). You of course can also create passion products from scratch too. 
+7. To create products that solve other people's problems. Helping others is rewarding, even if you do not directly benefit.
 
 
-## Beginners
+## Ideas
+
+
+### Beginners
 
 Learn a language while working on projects. Pick the most interesting of the following
 
@@ -18,7 +32,7 @@ Learn a language while working on projects. Pick the most interesting of the fol
 * Leetcode beginner topics
 * Check out some ideas from [here](https://www.perplexity.ai/search/Beginner-Programming-Projects-2KIk69tNRSqpkfT9sfhBbw?s=u)
 
-## Intermediate
+### Intermediate
 
  - Find an issue on an open source project on Github and try to solve it. There are some issues that are marked as "good for beginners" which can be a great way to get into open source. A good place to start looking for projects is by the language you are familiar with, or if you have used the software before
  - Learn NextJS and create a nextjs web app. https://codedamn.com/news/nextjs/top-10-project-ideas
